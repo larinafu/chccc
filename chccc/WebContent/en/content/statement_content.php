@@ -1,13 +1,62 @@
 <div class="content">
+
 <p>
- Cherry Hill Chinese Christian Church (CHCCC) is 
- a non-denominational, Bible believing Christian church. The English ministry is an integral part of the CHCCC, 
- and consists of an active Youth Program and a full-scale Children's Program (nursery-high school) with 
- English as the common language among the attendants . On a typical Sunday, 
- about 40 youths and 70 children attend worship services and Sunday school classes, 
- in addition to about 30 younger children attending the nursery and toddlers' classes. 
- We also have regular fellowship on Friday evening at the church. Despite the differences we may have, 
- we all come to CHCCC with the same purpose that is to know and worship our Savior and Lord Jesus Christ.
+<li>The Bible</li>
+We believe that the entire Bible, including all sixty-six books in the Old Testament and the New Testament, is God-breathed and was written down by men. We believe in the inerrancy of the Bible, and that the Bible is the truth, the center of Christian fellowship, and the only inerrant guideline of human behavior.
+</p> 
+
+<p>
+<li>Trinity (Father, Son, and Holy Spirit)</li>
+We believe that there is only one eternal God, He is above all. God includes three beings: Father, Son, and Holy Spirit. These three beings are one, but each has equal holiness and goodness.
+
+We believe that the Son Jesus Christ is absolutely divine. He has the holiness not attainable by human, He is the true God, and has co-existed with the Father and the Holy Spirit since the eternal past. He is eternal, and He never lost His divine nature even though He chose to humble Himself to become a man. He was born of the virgin Mary through the conception from the Holy Spirit.
+
+We believe that the Holy Spirit is God, having the same nature as the Father and the Son. He testifies for our sins, for righteousness, for judgment, and for the truth. He is the agent for humans being born again. He dwells in the heart of every child of God, seals them, upholds them, guides them, teaches them, testifies for them, cleanses them, and helps them.
 </p>
 
+<p>
+<li>Creation</li>
+We believe that God created the universe and all things in it, each according to its own kind.
+</p>
+
+<p>
+<li>The Fall of Mankind</li>
+We believe that the first man, Adam, was without sin when he was created, but he chose to rebel against God and led the human kind into condemnation and death. Since then, all human beings have been born in sin, grown in unrighteousness, and become sinners without excuse before God.
+</p>
+
+<p>
+<li>Salvation of Grace</li>
+We believe that only through the Christ that was the Word becoming flesh, human can escape the curse of sin. Jesus was sinless, but he chose to become a man in order to bear the sin of human beings, to suffer and die on the cross, and was resurrected on the third day, fulfilling the righteous demand of God. His salvation belongs to all who believe in Him and are willing to receive this grace.
+
+We believe that sinners can be saved from sin only through believing in the salvation accomplished in Jesus Christ. The salvation is based upon God's grace and through the faith of humans, but not upon their good deeds.
+
+We believe that all who accept Jesus Christ as their Savior are born again in the Holy Spirit, and live in Christ until eternity.
+</p>
+
+<p>
+<li>Church</li>
+We believe that the church was built by Jesus Christ. He is the head of the church; the church is His body for the purpose of serving and to be His glorious bride. We believe that the church is composed of born-again Christians, manifested through many local churches. A local church is composed of baptized believers who join with the gospel through faith; they practice the ordinances and use His laws as the guidelines for living.
+</p>
+
+<p>
+<li>Ordinances (Baptism and Communion)</li>
+We believe in the two ordinances of church: baptism and communion.
+
+Baptism is a declaration of faith by the believers in the crucifixion, burial, and resurrection of Christ. The obedience in baptism is an effect from their faithful living. Through this ordinance, they demonstrate in public their desire to be crucified and buried with Christ, and then resurrected with Him, and their desire to seek after the sanctification of Christian living. CHCCC practices communion once a month. The bread signifies the body of Christ; the cup signifies the blood of Christ. To take the bread and the cup signifies the remembrance of the Lord, of His death and of the hope of His return. All who have been baptized and understand the meaning of communion can join in this ordinance.
+</p>
+
+<p>
+<li>Returning of Christ</li>
+We believe that Jesus Christ will return Himself to judge the dead and the living.
+</p>
+
+<p>
+<li>Resurrection</li>
+We believe in the actual resurrection of the dead to face the final judgment upon returning of Christ. The justified believers will be resurrected to receive eternal life, and the unbelievers will be resurrected to be condemned.
+</p>
+
+<p>
+<li>Fellowship</li>
+We can have fellowship with other believers who share the same faith, but should separate from any heresies.
+</p>
 </div>

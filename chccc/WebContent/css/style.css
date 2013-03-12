@@ -289,12 +289,41 @@ nav {
   margin: 2px 0 22px 0px;
 }
 
+.content li { 
+  font-size: 140%;
+  list-style-type: none;
+}
+
+
 .content ul li, .sidebar ul li { 
   list-style-type: none;
   background: url(../../images/bullet.png) no-repeat;
   margin: 0 0 0 0; 
   padding: 0 0 4px 28px;
   line-height: 1.5em;
+}
+#makeMeScrollable
+		{
+			width: 930px;
+			height: 330px;
+			position: relative;
+		}
+
+#makeMeScrollable div.scrollableArea *
+{
+	position: relative;
+	display: block
+	float: left;
+	margin: 0;
+	padding: 0;	
+	/* If you don't want the images in the scroller to be selectable, try the following
+		block of code. It's just a nice feature that prevent the images from
+		accidentally becoming selected/inverted when the user interacts with the scroller. */
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 footer { 
