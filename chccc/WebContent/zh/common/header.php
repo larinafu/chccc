@@ -21,7 +21,7 @@ function switchLanguage($target){
       <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="index.html">櫻桃山華人基督教會</a></h1>
+          <h1><a href="/index.php">櫻桃山華人基督教會</a></h1>
           <h2>Together We Serve</h2>
         </div>
       </div>
@@ -31,7 +31,7 @@ function switchLanguage($target){
             <li><a href="/zh/index.php">主頁</a></li>
             <li><a href="examples.html">簡介</a>
                <ul>
-                <li><a href="#">教會信仰</a></li>
+                <li><a href="/zh/aboutus/statement.php">教會信仰</a></li>
                 <li><a href="#">教會歷史</a></li>
                 <li><a href="#">教會會眾</a></li>
                 <li><a href="#">浸禮與會員</a></li>

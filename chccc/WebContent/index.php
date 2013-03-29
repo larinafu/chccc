@@ -1,3 +1,3 @@
 <?php 
-	header("Location: /en/index.php");
+	header("Location: /zh/index.php");
 ?>
