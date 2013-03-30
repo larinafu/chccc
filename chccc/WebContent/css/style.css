@@ -268,6 +268,57 @@ nav {
   padding: 15px 0;
 }
 
+#leftnav_container { 
+  float: left;
+  width: 160px;
+  padding: 20px 0 0 0;
+}
+
+.leftnav { 
+  float: left;
+  width: 130px;
+  margin: 0 0 17px 0;
+  background: #22003C;
+  color: #222;
+  background: #FFF;
+  border: 1px solid #eee;
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border: 7px 7px 7px 7px;
+  padding: 0 15px 5px 13px;
+  opacity: 0.8;
+}
+
+
+.leftnav h3 { 
+  padding: 9px 15px 5px 0;
+  color: #222;
+  font: 110% 'News Cycle', arial, sans-serif;
+}
+
+.leftnav ul { 
+  margin: 15px 0 15px 0;
+}
+
+.leftnav ul li { 
+  list-style-type: none;
+} 
+
+.leftnav li a, .leftnav li a:hover { 
+  color: #222;
+  text-decoration: none;
+} 
+
+.leftnav li a:hover { 
+  /* text-decoration: underline; */
+} 
+
+.leftnav_item, .content_item { 
+  padding: 15px 0;
+}
+
+
+
 .paperclip { 
   float: left;
   position: relative; 
@@ -296,6 +347,33 @@ nav {
 
 
 .content ul li, .sidebar ul li { 
+  list-style-type: none;
+  background: url(../../images/bullet.png) no-repeat;
+  margin: 0 0 0 0; 
+  padding: 0 0 4px 28px;
+  line-height: 1.5em;
+}
+
+.subcontent { 
+  text-align: left;
+  width: 630px;
+  margin: 0 0 15px 0;
+  float: right;
+  font-size: 120%;
+  padding: 14px 0 0 0;
+}
+  
+.subcontent ul { 
+  margin: 2px 0 22px 0px;
+}
+
+.subcontent li { 
+  font-size: 140%;
+  list-style-type: none;
+}
+
+
+.subcontent ul li { 
   list-style-type: none;
   background: url(../../images/bullet.png) no-repeat;
   margin: 0 0 0 0; 
