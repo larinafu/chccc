@@ -33,8 +33,6 @@ function switchLanguage($target){
                <ul>
                 <li><a href="/zh/aboutus/statement.php">教會信仰</a></li>
                 <li><a href="/zh/aboutus/history.php">教會歷史</a></li>
-                <li><a href="/zh/aboutus/congregation.php">教會會眾</a></li>
-                <li><a href="/zh/aboutus/baptism_membership.php">浸禮與會員</a></li>
                 <li><a href="/zh/aboutus/map.php">地圖</a></li>
                 <li><a href="/zh/aboutus/contact_us.php">聯絡我們</a></li>
               </ul>	

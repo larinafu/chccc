@@ -380,6 +380,15 @@ nav {
   padding: 0 0 4px 28px;
   line-height: 1.5em;
 }
+
+.subcontent table{
+  margin: 10px 0 30px 0;
+  border:1px solid white;
+}
+.subcontent table tr td{
+  background:transparent;
+  border-top: none;
+}
 #makeMeScrollable
 		{
 			width: 930px;
