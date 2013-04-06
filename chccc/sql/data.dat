@@ -1,0 +1,5 @@
+insert into message (message_date,speaker,message_title) 
+values('2013-04-07','于慕潔牧師','看哪，神的羔羊');
+
+insert into message (message_date,speaker,message_title) 
+values('2013-03-31','于慕潔牧師','同心建造');

@@ -23,9 +23,12 @@
 			<img src="/images/DSC_0293.jpg" alt="Gnome" id="gnome" />
 			<img src="/images/DSC_0318.jpg" alt="Leaf" id="leaf" />
 			<img src="/images/DSC_0325.jpg" alt="Leaf" id="leaf" />
-		</div>      
+		</div> 
+		<!--     
   		<?php include './content/home_sidebar.php'; ?> 
+      	-->
       	<?php include './content/home_content.php'; ?>
+      	
       	
  
     </div>
