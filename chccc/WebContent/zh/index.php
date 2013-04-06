@@ -13,14 +13,16 @@
     <div id="site_content">
                <!-- image scrollable -->    
     	<div id="makeMeScrollable">
-			<img src="/images/field.jpg" alt="Field" id="field" />
-			<img src="/images/gnome.jpg" alt="Gnome" id="gnome" />
-			<img src="/images/pencils.jpg" alt="Pencils" id="pencils" />
-			<img src="/images/golf.jpg" alt="Golf" id="golf" />
-			<img src="/images/river.jpg" alt="River" id="river" />
-			<img src="/images/train.jpg" alt="Train" id="train" />
-			<img src="/images/leaf.jpg" alt="Leaf" id="leaf" />
-			<img src="/images/dog.jpg" alt="Dog" id="dog" />
+			<img src="/images/DSC_0301.jpg" alt="Field" id="field" />
+			<img src="/images/DSC_0305.jpg" alt="Pencils" id="pencils" />
+			<img src="/images/DSC_0307.jpg" alt="Golf" id="golf" />
+			<img src="/images/DSC_0309.jpg" alt="Golf" id="golf" />
+			<img src="/images/DSC_0313.jpg" alt="Golf" id="golf" />
+			<img src="/images/DSC_0314.jpg" alt="River" id="river" />
+			<img src="/images/DSC_0315.jpg" alt="Train" id="train" />
+			<img src="/images/DSC_0293.jpg" alt="Gnome" id="gnome" />
+			<img src="/images/DSC_0318.jpg" alt="Leaf" id="leaf" />
+			<img src="/images/DSC_0325.jpg" alt="Leaf" id="leaf" />
 		</div>      
   		<?php include './content/home_sidebar.php'; ?> 
       	<?php include './content/home_content.php'; ?>
