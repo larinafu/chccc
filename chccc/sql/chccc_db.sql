@@ -2,7 +2,7 @@ create database chccc
 	CHARACTER SET utf8;
 use chccc;
 
-create table message(
+create table ch_message(
 	message_id MEDIUMINT NOT NULL AUTO_INCREMENT,
 	message_date date NOT NULL,
 	speaker varchar(120) NOT NULL,
@@ -17,8 +17,21 @@ create table message(
 	published bool DEFAULT TRUE,
 	PRIMARY KEY(message_id)
 );
+create index idx_ch_message_date on ch_message(message_date);
+create index idx_ch_message_speaker on ch_message(speaker);
 
-create index idx_message_date on message(message_date);
-create index idx_message_speaker on message(speaker);
+create table ch_news(
+	news_id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	news_date date NOT NULL,
+	news_summary varchar(500) NOT NULL,
+	news varchar(65535),
+	news_summary_en varchar(500),
+	news_en varchar(65535),
+	sort_order SMALLINT DEFAULT 2,
+	published bool DEFAULT TRUE,
+	PRIMARY KEY(news_id)
+);
+create index idx_ch_news_date on ch_news(news_date);
+
 
 

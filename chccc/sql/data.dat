@@ -1,5 +1,15 @@
-insert into message (message_date,speaker,message_title) 
-values('2013-04-07','于慕潔牧師','看哪，神的羔羊');
+insert into ch_message (message_date,speaker,message_title) 
+values('2013-04-07','于慕潔牧師','選擇那上好的福分');
 
-insert into message (message_date,speaker,message_title) 
-values('2013-03-31','于慕潔牧師','同心建造');
+insert into ch_message (message_date,speaker,message_title) 
+values('2013-03-31','于慕潔牧師','看哪，神的羔羊');
+
+insert into ch_message (message_date,speaker,message_title) 
+values('2013-03-24','于慕潔牧師','同心建造');
+
+insert into ch_news(news_date,news_summary,sort_order)
+values('2013-03-10','三月二十九日（週五）是今年的受難日。當天晚上，教會將有中英文聯合的受難日特別聚會。聚會從晚八時開始。請大家為此代禱，並預留時間參加。',1);
+insert into ch_news(news_date,news_summary,sort_order)
+values('2013-03-10','三月三十一日（主日）為復活節，屆時教會將有在戶外的中英文聯合晨曦崇拜。地點在教會的戶外草坪。晨曦崇拜在早七時至早八時之間進行。隨後教會將為大家提供早餐。 在晨曦崇拜時間，沒有兒童看護，請家長們自己照顧孩子。請大家為晨曦崇拜代禱，並積極參與。',2);
+insert into ch_news(news_date,news_summary)
+values('2013-04-07','今年的生之追尋福音營將於5/25至5/27週末在東方大學舉辦，請大家邀請福音朋友參加');

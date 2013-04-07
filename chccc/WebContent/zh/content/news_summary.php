@@ -1,7 +1,29 @@
-<li>
-三月二十九日（週五）是今年的受難日。當天晚上，教會將有中英文聯合的受難日特別聚會。聚會從晚八時開始。請大家為此代禱，並預留時間參加。
-</li>
-<li>
-三月三十一日（主日）為復活節，屆時教會將有在戶外的中英文聯合晨曦崇拜。地點在教會的戶外草坪。晨曦崇拜在早七時至早八時之間進行。隨後教會將為大家提供早餐。
-在晨曦崇拜時間，沒有兒童看護，請家長們自己照顧孩子。請大家為晨曦崇拜代禱，並積極參與。
-</li>
+<?php
+$username="chccc";
+$password="53chccc2004";
+$database="chccc";
+
+mysql_connect(localhost,$username,$password);
+@mysql_select_db($database) or die( "Unable to select database");
+mysql_query ('SET NAMES utf8');
+$query="SELECT * FROM ch_news where published=1 order by news_date desc,sort_order";
+$result=mysql_query($query);
+
+$num=mysql_numrows($result);
+
+mysql_close();
+
+$i=0;
+
+while ($i < $num) {
+
+	$news_date=mysql_result($result,$i,"news_date");
+	$news_summary=mysql_result($result,$i,"news_summary");
+	
+	
+	echo "<li>$news_summary</li>";
+	
+	$i++;
+}
+
+?>
