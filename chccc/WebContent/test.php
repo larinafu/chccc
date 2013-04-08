@@ -6,26 +6,28 @@
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  * test
  */
+ echo "server docu root: $_SERVER[DOCUMENT_ROOT]";
+ 
+if ($handle = opendir("$_SERVER[DOCUMENT_ROOT]/images")) {
+    echo "Directory handle: $handle\n";
+    echo "Entries:\n";
 
+    /* This is the correct way to loop over the directory. */
+    while (false !== ($entry = readdir($handle))) {
+        echo "$entry\n<br>";
+    }
 
+    /* This is the WRONG way to loop over the directory. 
+    while ($entry = readdir($handle)) {
+        echo "$entry\n";
+    }
+    */
 
-function switchLanguage(){
-	$language="en";
-    $uri="/chccc/cn/test.php";
-	$target=$language;
-	echo $target;
-	if($language=="en"){
-		$target="cn";
-	}
-	$pattern="/\/".$language."\//";
-	$replacement="/".$target."/";
-	print "pattern is ".$pattern;
-	print "replacement is ".$replacement;
-	print "uri is: ".$uri;
-	
-	$targetUri=preg_replace($pattern,$replacement,$uri);
-	print "target uri is: ".$targetUri;
+    closedir($handle);
 }
 
-switchLanguage();
+echo "do"
+
+
+
 ?>
