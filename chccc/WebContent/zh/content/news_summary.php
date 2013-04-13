@@ -3,7 +3,7 @@ $username="chccc";
 $password="53chccc2004";
 $database="chccc";
 
-mysql_connect(localhost,$username,$password);
+mysql_connect("localhost",$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
 $query="SELECT * FROM ch_news where published=1 order by news_date desc,sort_order";
