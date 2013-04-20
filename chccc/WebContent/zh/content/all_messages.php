@@ -15,7 +15,7 @@ mysql_close();
 
 $i=0;
           
-while ($i < min(2,$num)) {
+while ($i < $num) {
 
 	$speaker=mysql_result($result,$i,"speaker");
 	$message_title=mysql_result($result,$i,"message_title");
