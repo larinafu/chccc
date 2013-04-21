@@ -7,6 +7,25 @@ values('2013-03-31','于慕潔牧師','看哪，神的羔羊');
 insert into ch_message (message_date,speaker,message_title) 
 values('2013-03-24','于慕潔牧師','同心建造');
 
+insert into ch_message (message_date,speaker,message_title) 
+values('2012-10-08','遠志明牧師','靈魂的歸宿');
+
+
+insert into ch_message (message_date,speaker,message_title) 
+values('2011-10-08','陳興福牧師','基督徒對政府的責任');
+
+insert into ch_message (message_date,speaker,message_title) 
+values('2010-10-08','陳興福牧師','最偉大的愛');
+
+insert into ch_message (message_date,speaker,message_title) 
+values('2009-10-08','遠志明牧師','得與失');
+
+insert into ch_message (message_date,speaker,message_title) 
+values('2008-10-08','莊祖鯤牧師','不斷成長的生命');
+
+insert into ch_message (message_date,speaker,message_title) 
+values('2007-10-06','于慕潔長老','愛中建立主榮耀的教會');
+
 insert into ch_news(news_date,news_summary,sort_order)
 values('2013-03-10','三月二十九日（週五）是今年的受難日。當天晚上，教會將有中英文聯合的受難日特別聚會。聚會從晚八時開始。請大家為此代禱，並預留時間參加。',1);
 insert into ch_news(news_date,news_summary,sort_order)
