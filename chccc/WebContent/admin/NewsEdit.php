@@ -1,4 +1,4 @@
-<?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
+<?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?> 
 <?php
 $news_id = $_GET['id'];
 

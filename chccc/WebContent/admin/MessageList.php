@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 </head>
 <body>
 <?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>	
