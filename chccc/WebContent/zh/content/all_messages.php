@@ -11,7 +11,7 @@ $result = mysql_query($query);
 
 $num = mysql_numrows($result);
 $selected_year=null;
-if(isset($_GET['message_year']))$selected_year=$_GET['message_year'];
+if(isset($_GET['message_year']))$selected_year=$_GET['message_year']; 
 
 $i = 0;
 echo "<table><tr>";
