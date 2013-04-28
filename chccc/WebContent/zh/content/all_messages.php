@@ -7,8 +7,11 @@ mysql_query('SET NAMES utf8');
 $query = "SELECT DISTINCT YEAR(MESSAGE_DATE) AS message_year FROM ch_message ORDER BY YEAR(MESSAGE_DATE) DESC";
 $result = mysql_query($query);
 
+//we are using isset() to avoid the "Notice: Undefined Index" from php
+
 $num = mysql_numrows($result);
-$selected_year=$_GET['message_year'];
+$selected_year=null;
+if(isset($_GET['message_year']))$selected_year=$_GET['message_year'];
 
 $i = 0;
 echo "<table><tr>";
@@ -16,7 +19,17 @@ while ($i < $num) {
 
 	$year = mysql_result($result, $i, "message_year");
 	if(!isset($selected_year))$selected_year=$year;
-	$current_url=$_SERVER['REQUEST_URL'];
+	if(isset($_SERVER['REQUEST_URL'])){
+		$current_url=$_SERVER['REQUEST_URL'];
+	}
+	else{
+		$current_uri=$_SERVER['REQUEST_URI'];
+		$pos=strpos($current_uri,"?");
+		$current_url=$_SERVER['REQUEST_URI'];
+		if($pos!=false){
+			$current_url=substr($current_uri,0,$pos);
+		}		
+	}
 	echo "<td><a href='$current_url?message_year=$year'>$year</a></td>";
 
 	$i++;
