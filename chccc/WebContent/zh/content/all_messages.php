@@ -7,7 +7,7 @@ mysql_query('SET NAMES utf8');
 $query = "SELECT DISTINCT YEAR(MESSAGE_DATE) AS message_year FROM ch_message ORDER BY YEAR(MESSAGE_DATE) DESC";
 $result = mysql_query($query);
 
-//we are using isset() to avoid the "Notice: Undefined Index" from php
+//we are using isset() to avoid the "Notice: Undefined Index" from php 
 
 $num = mysql_numrows($result);
 $selected_year=null;
