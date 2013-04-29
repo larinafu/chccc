@@ -1,4 +1,5 @@
 <?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
+
 <?php
 mysql_connect($db_host, $username, $password);
 @ mysql_select_db($database) or die("Unable to select database");
