@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
   <?php include '../../common/head.php'; ?>
 </head>
