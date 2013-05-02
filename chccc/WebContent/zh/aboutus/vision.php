@@ -11,7 +11,7 @@
     
     <div id="site_content">
       <?php include './aboutus_leftnav.php'; ?>
-      <?php include '../content/vision_calendar_content.php'; ?>
+      <?php include '../content/vision_content.php'; ?>
     </div>
     
  	<?php include '../common/footer.php'; ?>

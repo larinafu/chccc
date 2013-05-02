@@ -1,6 +1,6 @@
 <div class="subcontent">
 <table>
-<tr><td>于慕潔牧師</td><td>主任牧師</td><td>muhchieh_yu@gmail.com</td><td>856-428-1398</td></tr>
+<tr><td>于慕潔牧師</td><td>主任牧師</td><td>myu@cherryhillccc.org</td><td>856-428-1398</td></tr>
 <tr><td>馮衡生弟兄</td><td>執事會主席/教育/英語/青少年</td><td>adam_feng@yahoo.com</td><td>856-267-5037</td></tr>
 <tr><td>方家義弟兄</td><td>財務/文書</td><td>jfang99@yahoo.com</td><td>631-590-1098</td></tr>
 <tr><td>周功耀弟兄</td><td>敬拜</td><td>zhoug@drexel.edu</td><td>856-751-9798</td></tr>
