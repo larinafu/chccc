@@ -34,7 +34,7 @@ function switchLanguage($target){
                 <li><a href="/zh/aboutus/statement.php">教會信仰</a></li>
                 <li><a href="/zh/aboutus/history.php">教會歷史</a></li>
                 <li><a href="/zh/aboutus/map.php">地圖</a></li>
-                <li><a href="/zh/aboutus/contact_us.php">聯絡我們</a></li>
+                <li><a href="/zh/aboutus/contactus.php">聯絡我們</a></li>
               </ul>	
             </li>
             <li><a href="/zh/worship/children_worship.php">崇拜</a>
