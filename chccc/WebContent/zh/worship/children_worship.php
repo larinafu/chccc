@@ -10,7 +10,7 @@
     
     <div id="site_content">
       <?php include './worship_leftnav.php'; ?>
-      <?php include "$_SERVER[DOCUMENT_ROOT]/zh/content/all_messages.php"; ?>
+      <?php include "../content/children_worship_content.php"; ?>
     </div>
     
  	<?php include '../common/footer.php'; ?>

@@ -21,7 +21,9 @@ while ($i < min(2,$num)) {
 	$message_title=mysql_result($result,$i,"message_title");
 	$message_date=mysql_result($result,$i,"message_date");
 	
-	echo "<tr><td>$message_date</td><td>$speaker</td><td><a href='/library/$message_date.mp3'>$message_title</a></td><td></td></tr>";
+	echo "<tr><td>$message_date</td>" .
+			"<td>$speaker</td><td><a href='/library/$message_date.mp3'>$message_title</a></td>" .
+			"<td><a href='/library/pdf/$message_date.pdf'><img src='/images/pdf.gif'></a></td></tr>";
 	
 	$i++;
 }
