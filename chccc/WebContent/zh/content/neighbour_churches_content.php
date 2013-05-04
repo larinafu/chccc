@@ -14,4 +14,4 @@
 <tr><td>康州哈城華人浸信會</td><td>美門華人基督教會</td></tr>
 <tr><td>費城三一華人基督教會</td><td>$nbsp;</td></tr>
 </table>
-</div>
+</div> 
