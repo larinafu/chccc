@@ -12,10 +12,13 @@ function switchLanguage($target){
 		$replacement="/".$target."/";
 		
 		$targetUri=preg_replace("/\/".$language."\//","/".$target."/",$uri);
-		print $targetUri;
+		if(file_exists("$_SERVER[DOCUMENT_ROOT]$targetUri"))
+			print $targetUri;
+		else print "/$target/index.php";
 	}else print $uri;
  
 }
+
 ?>
    <header>
       <div id="logo">
@@ -46,13 +49,7 @@ function switchLanguage($target){
                 <li><a href="/zh/worship/worship_time.php">崇拜時間</a></li>
               </ul>	
             </li>
-            <li><a href="/zh/sundayschool/children_sunday_school.php">進修</a>
-              <ul>
-                <li><a href="/zh/sundayschool/children_sunday_school.php">兒童主日學</a></li>
-                <li><a href="/zh/sundayschool/adult_sunday_school.php">成人主日學</a></li>
-              </ul>	
-            </li>
-            <li><a href="/zh/community/community_ministry.php">我們的社區</a>
+            <li><a href="/zh/community/community_ministry.php">團契與社區</a>
               <ul>
                 <li><a href="/zh/community/community_ministry.php">社區事工</a></li>
                 <li><a href="/zh/community/children_ministry.php">兒童事工</a></li>
