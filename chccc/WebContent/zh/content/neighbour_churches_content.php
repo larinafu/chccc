@@ -1,13 +1,4 @@
 <div class="subcontent">
-<!--
-<ul>
-<li class="left">若歌教會</li>
-<li class="left">若歌教會</li>
-<li class="left">若歌教會</li>
-<li class="left">若歌教會</li>
-<li class="left">若歌教會</li>
-</ul>
--->
 <li>周邊教會</li>
 <table style="width:80%">
 <tr><td><a href="http://www.rccc.org">若歌教會</a></td><td><a href="http://www.wcec-home.org/">威明頓主恩堂</a></td></tr>
