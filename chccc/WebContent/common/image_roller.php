@@ -1,6 +1,6 @@
 <?php
 include('SimpleImage.php');
-
+$height=280;
 if ($handle = opendir("$_SERVER[DOCUMENT_ROOT]/images/roller/")) {
     echo "<div id='makeMeScrollable'>";
     
@@ -10,10 +10,10 @@ if ($handle = opendir("$_SERVER[DOCUMENT_ROOT]/images/roller/")) {
     	if("."==$entry || ".."==$entry)continue;
         echo "<img src='/images/roller/$entry' />";
         $image_info=getimagesize("$_SERVER[DOCUMENT_ROOT]/images/roller/$entry");
-        if($image_info[1]>330){
+        if($image_info[1]>$height){
         	$image = new SimpleImage();
         	$image->load("$_SERVER[DOCUMENT_ROOT]/images/roller/$entry");
-        	$image->resizeToHeight(330);
+        	$image->resizeToHeight($height);
   			$image->save("$_SERVER[DOCUMENT_ROOT]/images/roller/$entry");
         }
     }
