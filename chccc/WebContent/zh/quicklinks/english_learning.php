@@ -11,6 +11,7 @@
 	<?php include '../common/header.php'; ?>		
 
     <div id="site_content">
+     <?php include './quicklinks_leftnav.php'; ?>
       	<?php include '../content/english_learning_content.php'; ?> 
     </div>
     
