@@ -1,5 +1,6 @@
-
 <?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
+<div class="subcontent">
+<li>網絡信息</li>
 <?php
 mysql_connect($db_host, $username, $password);
 @ mysql_select_db($database) or die("Unable to select database");
@@ -44,14 +45,19 @@ $num = mysql_numrows($result);
 
 $i = 0;
 
-echo "<table>";
+echo "<table style='border-bottom:1px solid #888'><tr><th>日期</th><th>講員</th><th>主題</th><th>大綱</th></tr>";
 while ($i < $num) {
-
+	$background=null;
+	if($i%2==0)$background="rgb(245, 245, 250)";
 	$speaker = mysql_result($result, $i, "speaker");
 	$message_title = mysql_result($result, $i, "message_title");
 	$message_date = mysql_result($result, $i, "message_date");
 
-	echo "<tr><td>$message_date</td><td>$speaker</td><td><a href='/library/$message_date.mp3'>$message_title</a></td><td></td></tr>";
+	echo "<tr";
+	if(isset($background))echo " style='background-color:$background'";
+	echo "><td>$message_date</td><td>$speaker</td>" .
+			"<td><a href='/library/$message_date.mp3'>$message_title</a></td>" .
+			"<td><a href='/library/pdf/$message_date.pdf'><img src='/images/pdf.gif'></a></td></tr>";
 
 	$i++;
 }
@@ -59,6 +65,6 @@ while ($i < $num) {
 mysql_close();
 echo "</table>";
 ?>
-
+</div>
 
 

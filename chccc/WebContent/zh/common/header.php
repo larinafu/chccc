@@ -12,10 +12,13 @@ function switchLanguage($target){
 		$replacement="/".$target."/";
 		
 		$targetUri=preg_replace("/\/".$language."\//","/".$target."/",$uri);
-		print $targetUri;
+		if(file_exists("$_SERVER[DOCUMENT_ROOT]$targetUri"))
+			print $targetUri;
+		else print "/$target/index.php";
 	}else print $uri;
  
 }
+
 ?>
    <header>
       <div id="logo">
@@ -32,9 +35,10 @@ function switchLanguage($target){
             <li><a href="/zh/aboutus/statement.php">簡介</a>
                <ul>
                 <li><a href="/zh/aboutus/statement.php">教會信仰</a></li>
+                <li><a href="/zh/aboutus/vision.php">教會異象</a></li>
                 <li><a href="/zh/aboutus/history.php">教會歷史</a></li>
                 <li><a href="/zh/aboutus/map.php">地圖</a></li>
-                <li><a href="/zh/aboutus/contact_us.php">聯絡我們</a></li>
+                <li><a href="/zh/aboutus/contactus.php">聯絡我們</a></li>
               </ul>	
             </li>
             <li><a href="/zh/worship/children_worship.php">崇拜</a>
@@ -45,19 +49,10 @@ function switchLanguage($target){
                 <li><a href="/zh/worship/worship_time.php">崇拜時間</a></li>
               </ul>	
             </li>
-            <li><a href="/zh/sundayschool/children_sunday_school.php">進修</a>
-              <ul>
-                <li><a href="/zh/sundayschool/children_sunday_school.php">兒童主日學</a></li>
-                <li><a href="/zh/sundayschool/adult_sunday_school.php">成人主日學</a></li>
-              </ul>	
-            </li>
-            <li><a href="/zh/community/community_ministry.php">我們的社區</a>
+            <li><a href="/zh/community/community_ministry.php">團契與社區</a>
               <ul>
                 <li><a href="/zh/community/community_ministry.php">社區事工</a></li>
-                <li><a href="/zh/community/children_ministry.php">兒童事工</a></li>
-                <li><a href="/zh/community/youth_ministry.php">青少年事工</a></li>
-                <li><a href="/zh/community/english_ministry.php">英文堂</a></li>
-                <li><a href="/zh/community/mandarin_ministry.php">國語堂</a></li>
+                <li><a href="/zh/community/children_ministry.php">團契小組</a></li>
               </ul>
             </li>
             <li><a href="/events.php">最新活動</a></li>
