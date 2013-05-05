@@ -33,4 +33,4 @@ values('2013-04-15','最美的祝福','best_blessing.mp3');
 insert into ch_group(group_name,group_description) values('甘泉團契','作為櫻桃山華人基督教會的一份子，甘泉團契始於2003年11月，是教會最早開始的兩個家庭團契之一。當時教會尚未獨立，美國母會CHBC（櫻桃山浸信會）於2002年10月成立中文堂。在堂慶一週年的感恩日子裡，經禱告，中文堂同工們同領一個異象，決定開始家庭團契，幫助大家更多地認識神及在主內彼此相愛。
 遂於2003年11月開始了兩個家庭團契，甘泉團契即為其中之一，主要由家中有未成年孩子的家庭組成。');
 
-insert into ch_group_photo(photo_path,group_id) values('/images/cherrytree.jpg',1);
+insert into ch_group_photo(photo_path,group_id) values('cherrytree.jpg',1);
