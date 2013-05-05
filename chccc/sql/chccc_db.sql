@@ -36,6 +36,7 @@ create index idx_ch_news_date on ch_news(news_date);
 create table ch_music(
 	music_id MEDIUMINT NOT NULL AUTO_INCREMENT,
 	music_date date NOT NULL,
+	music_speaker varchar(100) NOT NULL,
 	music_name varchar(500) NOT NULL,
 	music_name_en varchar(500),
 	music_audio_file_name varchar(200),
