@@ -82,15 +82,6 @@ mysql_close();
                 <li><a href="/zh/sundayschool/adult_sunday_school.php">成人主日學</a></li>
               </ul>	
             </li>
-            <li><a href="/zh/community/community_ministry.php">我們的社區</a>
-              <ul>
-                <li><a href="/zh/community/community_ministry.php">社區事工</a></li>
-                <li><a href="/zh/community/children_ministry.php">兒童事工</a></li>
-                <li><a href="/zh/community/youth_ministry.php">青少年事工</a></li>
-                <li><a href="/zh/community/english_ministry.php">英文堂</a></li>
-                <li><a href="/zh/community/mandarin_ministry.php">國語堂</a></li>
-              </ul>
-            </li>
             <li><a href="/events.php">最新活動</a></li>
             <li><a href="<?php switchLanguage('en'); ?>">English</a></li>
           </ul>
