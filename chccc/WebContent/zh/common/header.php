@@ -14,7 +14,9 @@ function switchLanguage($target){
 		$replacement="/".$target."/";
 		
 		$targetUri=preg_replace("/\/".$language."\//","/".$target."/",$uri);
-		print $targetUri;
+		if(file_exists("$_SERVER[DOCUMENT_ROOT]$targetUri"))
+			print $targetUri;
+		else print "/$target/index.php";
 	}else print $uri;
  
 }
@@ -47,10 +49,11 @@ mysql_close();
             <li><a href="/zh/aboutus/statement.php">簡介</a>
                <ul>
                 <li><a href="/zh/aboutus/statement.php">教會信仰</a></li>
+                <li><a href="/zh/aboutus/vision.php">教會異象</a></li>
                 <li><a href="/zh/aboutus/history.php">教會歷史</a></li>
                 <li><a href="/zh/aboutus/map.php">地圖</a></li>
-                <li><a href="/zh/aboutus/contact_us.php">聯絡我們</a></li>
-              </ul>	
+                <li><a href="/zh/aboutus/contactus.php">聯絡我們</a></li>
+              </ul>		
             </li>
             <li><a href="/zh/worship/children_worship.php">崇拜</a>
               <ul>
@@ -62,16 +65,15 @@ mysql_close();
             </li>
             <li><a href="#">团契</a>
               <ul>
-<?php
-$i=0;
-while ($i < $num) {
-	$group_id  =mysql_result($result,$i,"group_id");
-	$group_name =mysql_result($result,$i,"group_name");
-	echo ("<li><a href='/zh/group/group.php?id=$group_id'>$group_name</a></li>");
-	$i++;
-} 
-?>
-                
+				<?php
+				$i=0;
+				while ($i < $num) {
+					$group_id  =mysql_result($result,$i,"group_id");
+					$group_name =mysql_result($result,$i,"group_name");
+					echo ("<li><a href='/zh/group/group.php?id=$group_id'>$group_name</a></li>");
+					$i++;
+				} 
+				?>                
               </ul>	
             </li>
             <li><a href="/zh/sundayschool/children_sunday_school.php">進修</a>
