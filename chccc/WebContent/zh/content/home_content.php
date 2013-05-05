@@ -7,4 +7,8 @@
           <h3>主日信息</h3>
 		  <?php include "$_SERVER[DOCUMENT_ROOT]/zh/content/latest_message.php"; ?>
         </div>
+     <div class="latest_message">
+          <h3>主日詩班獻詩</h3>
+		  <?php include "$_SERVER[DOCUMENT_ROOT]/zh/content/latest_hymn.php"; ?>
+        </div>
 </div>

@@ -37,7 +37,6 @@ create table ch_music(
 	music_id MEDIUMINT NOT NULL AUTO_INCREMENT,
 	music_date date NOT NULL,
 	music_name varchar(500) NOT NULL,
-	speaker_en varchar(120),
 	music_name_en varchar(500),
 	music_audio_file_name varchar(200),
 	music_lyrics_file_name varchar(200),
@@ -46,6 +45,5 @@ create table ch_music(
 	PRIMARY KEY(music_id)
 );
 create index idx_ch_music_date on ch_music(music_date);
-create index idx_ch_music_name on ch_music(music_name);
 
 
