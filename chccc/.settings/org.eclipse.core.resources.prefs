@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+encoding//WebContent/admin/GroupEdit.php=UTF-8
+encoding//WebContent/admin/GroupList.php=UTF-8
+encoding//WebContent/admin/GroupPhotoList.php=UTF-8
+encoding//WebContent/admin/GroupPhotoUD.php=UTF-8
 encoding//WebContent/admin/MessageEdit.php=UTF-8
 encoding//WebContent/admin/MessageList.php=UTF-8
 encoding//WebContent/admin/NewsEdit.php=UTF-8
@@ -25,6 +29,7 @@ encoding//WebContent/zh/content/vision_content.php=UTF-8
 encoding//WebContent/zh/content/worship_time_content.php=UTF-8
 encoding//WebContent/zh/content/year_books_content.php=UTF-8
 encoding//WebContent/zh/css/style.css.old=UTF-8
+encoding//WebContent/zh/group/group_leftnav.php=UTF-8
 encoding//WebContent/zh/index.php.old=UTF-8
 encoding//WebContent/zh/quicklinks/quicklinks_leftnav.php=UTF-8
 encoding//WebContent/zh/worship/worship_leftnav.php=UTF-8

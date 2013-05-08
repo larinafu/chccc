@@ -24,7 +24,7 @@ if (array_key_exists('save', $_POST)) {
 	$sort_order = $_POST["sortOrder"];
 	
 	
-	$db = new PDO('mysql:host=localhost;dbname='.$database,
+$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
     "$username",
     "$password",
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -67,7 +67,7 @@ else {
 
 	if (!is_null($news_id)) {
 		
-		mysql_connect(localhost,$username,$password);
+		mysql_connect($db_host,$username,$password);
 		@mysql_select_db($database) or die( "Unable to select database");
 		mysql_query ('SET NAMES utf8');
 		

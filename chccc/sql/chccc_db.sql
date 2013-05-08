@@ -1,5 +1,9 @@
 create database chccc
 	CHARACTER SET utf8;
+	
+CREATE USER 'chccc'@'localhost' IDENTIFIED BY '53chccc2004';
+GRANT ALL ON chccc.* TO 'chccc'@'localhost';
+
 use chccc;
 
 create table ch_message(
