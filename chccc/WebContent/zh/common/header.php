@@ -1,4 +1,4 @@
-<?php include $_SERVER[DOCUMENT_ROOT]. '/test/DBConfig.php'; ?>		
+<?php include $_SERVER[DOCUMENT_ROOT]. '/common/db_conn.php'; ?>		
 <?php
 
 function switchLanguage($target){	
@@ -21,7 +21,7 @@ function switchLanguage($target){
  
 }
 
-mysql_connect("localhost",$username,$password);
+mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
 
@@ -74,12 +74,6 @@ mysql_close();
 					$i++;
 				} 
 				?>                
-              </ul>	
-            </li>
-            <li><a href="/zh/sundayschool/children_sunday_school.php">進修</a>
-              <ul>
-                <li><a href="/zh/sundayschool/children_sunday_school.php">兒童主日學</a></li>
-                <li><a href="/zh/sundayschool/adult_sunday_school.php">成人主日學</a></li>
               </ul>	
             </li>
             <li><a href="/events.php">最新活動</a></li>
