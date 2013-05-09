@@ -1,8 +1,8 @@
 --message data
-insert into ch_message (message_date,speaker,message_title) 
-values('2013-04-07','于慕潔牧師','選擇那上好的福分');
-insert into ch_message (message_date,speaker,message_title) 
-values('2013-03-31','于慕潔牧師','看哪，神的羔羊');
+insert into ch_message (message_date,speaker,message_title,speaker_en,message_title_en) 
+values('2013-04-07','于慕潔牧師','選擇那上好的福分','Pastor Yu','Choose the best blessing');
+insert into ch_message (message_date,speaker,message_title,speaker_en,message_title_en) 
+values('2013-03-31','于慕潔牧師','看哪，神的羔羊','Pastor Yu','Look, the Lamb of God');
 insert into ch_message (message_date,speaker,message_title) 
 values('2013-03-24','于慕潔牧師','同心建造');
 insert into ch_message (message_date,speaker,message_title) 
@@ -23,12 +23,15 @@ insert into ch_news(news_date,news_summary,sort_order)
 values('2013-03-10','三月二十九日（週五）是今年的受難日。當天晚上，教會將有中英文聯合的受難日特別聚會。聚會從晚八時開始。請大家為此代禱，並預留時間參加。',1);
 insert into ch_news(news_date,news_summary,sort_order)
 values('2013-03-10','三月三十一日（主日）為復活節，屆時教會將有在戶外的中英文聯合晨曦崇拜。地點在教會的戶外草坪。晨曦崇拜在早七時至早八時之間進行。隨後教會將為大家提供早餐。 在晨曦崇拜時間，沒有兒童看護，請家長們自己照顧孩子。請大家為晨曦崇拜代禱，並積極參與。',2);
-insert into ch_news(news_date,news_summary)
-values('2013-04-07','今年的生之追尋福音營將於5/25至5/27週末在東方大學舉辦，請大家邀請福音朋友參加');
+insert into ch_news(news_date,news_summary,news_summary_en)
+values('2013-04-07','今年的生之追尋福音營將於5/25至5/27週末在東方大學舉辦，請大家邀請福音朋友參加','The 20th Quest of Life 
+Gospel Camp will be held between 5/15 and 5/27 in Eastern University. Please invite unbelivers to attend');
 
 
-insert into ch_music(music_date,music_name,music_audio_file_name)
-values('2013-04-15','最美的祝福','best_blessing.mp3');
+insert into ch_music(music_date,music_name,music_audio_file_name,music_name_en)
+values('2013-04-15','最美的祝福','best_blessing.mp3','The Best Blessing');
+insert into ch_music(music_date,music_name,music_name_en)
+values('2013-04-30','奇異恩典','The Amazing Grace');
 
 insert into ch_group(group_name,group_description) values('甘泉團契','作為櫻桃山華人基督教會的一份子，甘泉團契始於2003年11月，是教會最早開始的兩個家庭團契之一。當時教會尚未獨立，美國母會CHBC（櫻桃山浸信會）於2002年10月成立中文堂。在堂慶一週年的感恩日子裡，經禱告，中文堂同工們同領一個異象，決定開始家庭團契，幫助大家更多地認識神及在主內彼此相愛。
 遂於2003年11月開始了兩個家庭團契，甘泉團契即為其中之一，主要由家中有未成年孩子的家庭組成。');

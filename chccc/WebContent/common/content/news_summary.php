@@ -1,9 +1,10 @@
+<?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
+<?php require_once "$_SERVER[DOCUMENT_ROOT]/common/LanguageUtil.php" ?>
 <?php
-$username="chccc";
-$password="53chccc2004";
-$database="chccc";
+$language = LanguageUtil::getCurrentLanguage();
 
-mysql_connect("localhost",$username,$password);
+
+mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
 $query="SELECT * FROM ch_news where published=1 order by news_date desc,sort_order";
@@ -15,10 +16,13 @@ mysql_close();
 
 $i=0;
 
+$summary_field="news_summary";
+if("en"==$language)$summary_field=$summary_field."_".$language;
+
 while ($i < $num) {
 
 	$news_date=mysql_result($result,$i,"news_date");
-	$news_summary=mysql_result($result,$i,"news_summary");
+	$news_summary=mysql_result($result,$i,$summary_field);
 	
 	
 	echo "<li>$news_summary</li>";

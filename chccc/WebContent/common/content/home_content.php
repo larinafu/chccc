@@ -13,7 +13,7 @@
 <div class="content">
        <div class="home_news_summary">
           <h3><?php echo($title_news); ?></h3>
-		  <?php include "$_SERVER[DOCUMENT_ROOT]/zh/content/news_summary.php"; ?>
+		  <?php include "$_SERVER[DOCUMENT_ROOT]/common/content/news_summary.php"; ?>
         </div>
         <div class="latest_message">
           <h3><?php echo ($title_message);?></h3>
@@ -21,6 +21,6 @@
         </div>
      <div class="latest_message">
           <h3><?php echo ($title_songs);?></h3>
-		  <?php include "$_SERVER[DOCUMENT_ROOT]/zh/content/latest_hymn.php"; ?>
+		  <?php include "$_SERVER[DOCUMENT_ROOT]/common/content/latest_hymn.php"; ?>
         </div>
 </div>
