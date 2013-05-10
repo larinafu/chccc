@@ -32,6 +32,8 @@ $group_name =mysql_result($result, 0, "group_name");
 </script>
 </head>
 <body>
+<?php include $_SERVER[DOCUMENT_ROOT]. '/admin/header.php'; ?>	
+<div align="center">	
 <h1><?php echo $group_name ?>相片管理</h1>
 
 <br>
@@ -92,5 +94,6 @@ if ($num>0){
 	echo "</table>";
 }
 ?>
+</div>
 </body>
 </html>

@@ -1,4 +1,11 @@
 <?php include $_SERVER[DOCUMENT_ROOT]. '/common/db_conn.php'; ?>	
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<?php include $_SERVER[DOCUMENT_ROOT]. '/admin/header.php'; ?>	
+<div align="center">
 <?php
 $group_id =  $_POST["gid"];
 $photo_id =  $_POST["pid"];
@@ -22,9 +29,10 @@ $db = new PDO('mysql:host='.$db_host.';dbname='.$database,
 
 $allowedExts = array("gif", "jpeg", "jpg");
 $extension = end(explode(".", $_FILES["file"]["name"]));
-
+$extension = strtolower($extension);
 $max_photo_file_size = 8000000;
 
+//echo $_FILES["file"]["type"] ;
 if ((($_FILES["file"]["type"] == "image/gif")
 	|| ($_FILES["file"]["type"] == "image/jpeg")
 	|| ($_FILES["file"]["type"] == "image/jpg")
@@ -55,20 +63,20 @@ if ((($_FILES["file"]["type"] == "image/gif")
       		
       		addGroupPhoto($_POST["gid"], $_FILES["file"]["name"],  $_POST["photo_description"]);
       		//header("Location: GroupPhotoList.php?id=$group_id");
-      		echo "uploaded successfully. <a href='GroupPhotoList.php?id=$group_id' >Back to List</a>" ;
+      		echo "相片上传成功，<a href='GroupPhotoList.php?id=$group_id' >添加更多</a>" ;
       	}
     }
 }
 else
 {
-	echo "Invalid file";
+	echo "文件或者文件名可能有问题。";
 }
 
 }
 
 
 function addGroupPhoto($gid, $photo_name, $photo_desc){
-    $db = new PDO('mysql:host=$db_host;dbname=chccc',
+    $db = new PDO("mysql:host=$db_host;dbname=chccc",
 		    "chccc",
 		    "53chccc2004",
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -80,3 +88,6 @@ function addGroupPhoto($gid, $photo_name, $photo_desc){
 				"	('$photo_name', '$photo_desc', '$gid')");	
 }
 ?>
+</div>
+</body>
+</html>

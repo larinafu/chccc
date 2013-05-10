@@ -1,4 +1,40 @@
 <?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?> 
+<html>
+	<head>
+	<title>News Edit</title>
+	  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	    <script type="text/javascript">
+	        $(function() {
+			    $("#newsDate" ).datepicker({ dateFormat: "yy-mm-dd" });
+			    $("#newsDate" ).datepicker();
+
+			    $("form :text").width(800);
+			    $("#newsDate" ).width(100);
+			    //$('input[name^="messageSpeaker"]').width(100);
+			    
+			  });
+	    </script>
+	    <style type="text/css">
+	        div.header {
+	            font-weight: bolder;
+	            font-size: 20pt;
+	        }
+	        td.label {
+	            font-size: 13pt;
+	            text-align:right;
+	            width: 20%;
+	        }
+	        td.space {
+	        	width:5%;
+	        }
+	    </style>
+	</head>
+	<body>
+	<?php include $_SERVER[DOCUMENT_ROOT]. '/admin/header.php'; ?>	
+	<div align="center">
 <?php
 $news_id = $_GET['id'];
 
@@ -23,6 +59,10 @@ if (array_key_exists('save', $_POST)) {
 	
 	$sort_order = $_POST["sortOrder"];
 	
+	if (empty($sort_order)) {
+		$sort_order = 1;
+	}
+	
 	
 $db = new PDO('mysql:host='.$db_host.';dbname='.$database,
     "$username",
@@ -42,7 +82,8 @@ $db = new PDO('mysql:host='.$db_host.';dbname='.$database,
 		$db->query("INSERT INTO ch_news " .
 				"	(news_date, news_summary, news, news_summary_en, news_en, sort_order) " .
 				"	VALUES " .
-				"	('$news_date', '$news_summary', '$news', '$news_summary_en', '$news_en', '$sort_order')");	
+				"	('$news_date', '$news_summary', '$news', '$news_summary_en', '$news_en', '$sort_order')");
+		echo "创建成功";	
 	}
 	else {
 		$db->query("UPDATE ch_news SET " .
@@ -53,11 +94,13 @@ $db = new PDO('mysql:host='.$db_host.';dbname='.$database,
 				"	news_en = '$news_en', " .
 				"	sort_order = '$sort_order' " .
 				" WHERE news_id = $news_id");
+				
+		echo "更新成功";
 	}
 	
 	
 	//echo "Click <a href='NewsList.php'>here</a> to go back";
-	header("Location: NewsList.php");
+	//header("Location: NewsList.php");
 	exit();
 	
 }
@@ -87,40 +130,7 @@ else {
 	}
 		
 	?>
-	<html>
-		<head>
-		<title>News Edit</title>
-		  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-			<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  			<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-		    <script type="text/javascript">
-		        $(function() {
-				    $("#newsDate" ).datepicker({ dateFormat: "yy-mm-dd" });
-				    $("#newsDate" ).datepicker();
-
-				    $("form :text").width(800);
-				    $("#newsDate" ).width(100);
-				    //$('input[name^="messageSpeaker"]').width(100);
-				    
-				  });
-		    </script>
-		    <style type="text/css">
-		        div.header {
-		            font-weight: bolder;
-		            font-size: 20pt;
-		        }
-		        td.label {
-		            font-size: 13pt;
-		            text-align:right;
-		            width: 20%;
-		        }
-		        td.space {
-		        	width:5%;
-		        }
-		    </style>
-		</head>
-		<body>
+	
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<table border="0" cellpadding="0" cellspacing="0" width="80%" align="center">
 			<tr>
@@ -170,6 +180,8 @@ else {
 		<input type="hidden" name="newsID" value="<?php echo is_null($news_id) ? '' : $news_id; ?>" />
 		
 	</form>
-	</body>
-</html>
+	
 <?php } ?>
+</div>
+</body>
+</html>

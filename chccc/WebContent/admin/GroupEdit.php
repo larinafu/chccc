@@ -1,4 +1,42 @@
 <?php include $_SERVER[DOCUMENT_ROOT]. '/common/db_conn.php'; ?>
+
+<html>
+	<head>
+	<title>Group Edit</title>
+	  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	    <script type="text/javascript">
+	        $(function() {
+			    $("#messageDate" ).datepicker({ dateFormat: "yy-mm-dd" });
+			    $("#messageDate" ).datepicker();
+
+			    $("form :text").width(800);
+			    $("#messageDate" ).width(100);
+			    $('input[name^="messageSpeaker"]').width(100);
+			    
+			  });
+	    </script>
+	    <style type="text/css">
+	        div.header {
+	            font-weight: bolder;
+	            font-size: 20pt;
+	        }
+	        td.label {
+	            font-size: 13pt;
+	            text-align:right;
+	            width: 20%;
+	        }
+	        td.space {
+	        	width:5%;
+	        }
+	    </style>
+	</head>
+	<body>
+<?php include $_SERVER[DOCUMENT_ROOT]. '/admin/header.php'; ?>	
+
+		<div align="center">	
 <?php
 $group_id = $_GET['id'];
 
@@ -13,6 +51,10 @@ if (array_key_exists('save', $_POST)) {
 	$group_name = $_POST["group_name"];
 	$group_description = $_POST["group_description"];
 	$sort_order = $_POST["sort_order"];
+	
+	if (empty($sort_order)) {
+		$sort_order = 1;
+	}
 	
 	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
     "$username",
@@ -33,6 +75,7 @@ if (array_key_exists('save', $_POST)) {
 				"	(group_name, group_description, sort_order) " .
 				"	VALUES " .
 				"	('$group_name', '$group_description', '$sort_order')");	
+		echo "创建成功";
 	}
 	else {
 		$db->query("UPDATE ch_group SET " .
@@ -40,11 +83,12 @@ if (array_key_exists('save', $_POST)) {
 				"	group_description = '$group_description', " .
 				"	sort_order='$sort_order'" .
 				" WHERE group_id = $group_id");
+		echo "更新成功";
 	}
 	
 	
-	//echo "Click <a href='MessageList.php'>here</a> to go back";
-	header("Location: GroupList.php");
+	
+	//header("Location: GroupList.php");
 	exit();
 	
 }
@@ -71,40 +115,7 @@ else {
 	}
 		
 	?>
-	<html>
-		<head>
-		<title>Group Edit</title>
-		  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-			<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  			<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-		    <script type="text/javascript">
-		        $(function() {
-				    $("#messageDate" ).datepicker({ dateFormat: "yy-mm-dd" });
-				    $("#messageDate" ).datepicker();
-
-				    $("form :text").width(800);
-				    $("#messageDate" ).width(100);
-				    $('input[name^="messageSpeaker"]').width(100);
-				    
-				  });
-		    </script>
-		    <style type="text/css">
-		        div.header {
-		            font-weight: bolder;
-		            font-size: 20pt;
-		        }
-		        td.label {
-		            font-size: 13pt;
-		            text-align:right;
-		            width: 20%;
-		        }
-		        td.space {
-		        	width:5%;
-		        }
-		    </style>
-		</head>
-		<body>
+	
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<table border="0" cellpadding="0" cellspacing="0" width="80%" align="center">
 			<tr>
@@ -140,6 +151,9 @@ else {
 		</table>
 		<input type="hidden" name="group_id" value="<?php echo is_null($group_id) ? '' : $group_id; ?>" />
 	</form>
-	</body>
-</html>
+	
 <?php } ?>
+
+	</div>
+</body>
+</html>
