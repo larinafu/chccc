@@ -32,9 +32,8 @@ function switchLanguage($target){
             <li><a href="#">About Us</a>
                <ul>
                 <li><a href="/en/aboutus/statement.php">Statement</a></li>
+                 <li><a href="/en/aboutus/vision.php">History</a></li>
                 <li><a href="/en/aboutus/history.php">History</a></li>
-                <li><a href="/en/aboutus/congregation.php">Congregation</a></li>
-                <li><a href="/en/aboutus/baptism_membership.php">Baptism And Membership</a></li>
                 <li><a href="/en/aboutus/direction.php">Direction</a></li>
                 <li><a href="/en/aboutus/contactus.php">Contact Us</a></li>
               </ul>	
