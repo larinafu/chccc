@@ -1,4 +1,4 @@
-<div class="content">
+<div class="subcontent">
 <p>
 Cherry Hill Chinese Christian Church (CHCCC) is a non-denominational, Bible believing Christian church. 
 The English ministry is an integral part of the CHCCC, and consists of an active Youth Program and a full-scale 

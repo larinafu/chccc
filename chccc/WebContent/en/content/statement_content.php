@@ -1,4 +1,4 @@
-<div class="content">
+<div class="subcontent">
 
 <p>
 <li>The Bible</li>
