@@ -1,28 +1,28 @@
---message data 
-insert into ch_message (message_date,speaker,message_title,speaker_en,message_title_en) 
-values('2013-04-07','于慕潔牧師','選擇那上好的福分','Pastor Yu','Choose the best blessing');
-insert into ch_message (message_date,speaker,message_title,speaker_en,message_title_en) 
-values('2013-03-31','于慕潔牧師','看哪，神的羔羊','Pastor Yu','Look, the Lamb of God');
-insert into ch_message (message_date,speaker,message_title) 
-values('2013-03-24','于慕潔牧師','同心建造');
-insert into ch_message (message_date,speaker,message_title) 
-values('2012-10-08','遠志明牧師','靈魂的歸宿');
-insert into ch_message (message_date,speaker,message_title) 
-values('2011-10-08','陳興福牧師','基督徒對政府的責任');
-insert into ch_message (message_date,speaker,message_title) 
-values('2010-10-08','陳興福牧師','最偉大的愛');
-insert into ch_message (message_date,speaker,message_title) 
-values('2009-10-08','遠志明牧師','得與失');
-insert into ch_message (message_date,speaker,message_title) 
-values('2008-10-08','莊祖鯤牧師','不斷成長的生命');
-insert into ch_message (message_date,speaker,message_title) 
-values('2007-10-06','于慕潔長老','愛中建立主榮耀的教會');
+--message data
+insert into ch_message (message_date,speaker,speaker_title,message_title,speaker_en,message_title_en) 
+values('2013-04-07','于慕潔','牧師','選擇那上好的福分','Pastor Yu','Choose the best blessing');
+insert into ch_message (message_date,speaker,speaker_title,message_title,speaker_en,message_title_en) 
+values('2013-03-31','于慕潔','牧師','看哪，神的羔羊','Pastor Yu','Look, the Lamb of God');
+insert into ch_message (message_date,speaker,speaker_title,message_title) 
+values('2013-03-24','于慕潔','牧師','同心建造');
+insert into ch_message (message_date,speaker,speaker_title,message_title) 
+values('2012-10-08','遠志明','牧師','靈魂的歸宿');
+insert into ch_message (message_date,speaker,speaker_title,message_title) 
+values('2011-10-08','陳興福','牧師','基督徒對政府的責任');
+insert into ch_message (message_date,speaker,speaker_title,message_title) 
+values('2010-10-08','陳興福','牧師','最偉大的愛');
+insert into ch_message (message_date,speaker,speaker_title,message_title) 
+values('2009-10-08','遠志明','牧師','得與失');
+insert into ch_message (message_date,speaker,speaker_title,message_title) 
+values('2008-10-08','莊祖鯤','牧師','不斷成長的生命');
+insert into ch_message (message_date,speaker,speaker_title,message_title) 
+values('2007-10-06','于慕潔','長老','愛中建立主榮耀的教會');
 
-////////////////////////////
-insert into ch_news(news_date,news_summary,sort_order)
-values('2013-03-10','三月二十九日（週五）是今年的受難日。當天晚上，教會將有中英文聯合的受難日特別聚會。聚會從晚八時開始。請大家為此代禱，並預留時間參加。',1);
-insert into ch_news(news_date,news_summary,sort_order)
-values('2013-03-10','三月三十一日（主日）為復活節，屆時教會將有在戶外的中英文聯合晨曦崇拜。地點在教會的戶外草坪。晨曦崇拜在早七時至早八時之間進行。隨後教會將為大家提供早餐。 在晨曦崇拜時間，沒有兒童看護，請家長們自己照顧孩子。請大家為晨曦崇拜代禱，並積極參與。',2);
+
+insert into ch_news(news_date,news_summary,news_summary_en,sort_order)
+values('2013-03-10','三月二十九日（週五）是今年的受難日。當天晚上，教會將有中英文聯合的受難日特別聚會。聚會從晚八時開始。請大家為此代禱，並預留時間參加。','Lets gather on this Friday', 1);
+insert into ch_news(news_date,news_summary,news_summary_en,sort_order)
+values('2013-03-10','三月三十一日（主日）為復活節，屆時教會將有在戶外的中英文聯合晨曦崇拜。地點在教會的戶外草坪。晨曦崇拜在早七時至早八時之間進行。隨後教會將為大家提供早餐。 在晨曦崇拜時間，沒有兒童看護，請家長們自己照顧孩子。請大家為晨曦崇拜代禱，並積極參與。', 'Lets gather next Saturday.', 2);
 insert into ch_news(news_date,news_summary,news_summary_en)
 values('2013-04-07','今年的生之追尋福音營將於5/25至5/27週末在東方大學舉辦，請大家邀請福音朋友參加','The 20th Quest of Life 
 Gospel Camp will be held between 5/15 and 5/27 in Eastern University. Please invite unbelivers to attend');
@@ -30,11 +30,18 @@ Gospel Camp will be held between 5/15 and 5/27 in Eastern University. Please inv
 
 insert into ch_music(music_date,music_name,music_audio_file_name,music_name_en)
 values('2013-04-15','最美的祝福','best_blessing.mp3','The Best Blessing');
-insert into ch_music(music_date,music_name,music_name_en)
-values('2013-04-30','奇異恩典','The Amazing Grace');
+insert into ch_music(music_date,music_name,music_audio_file_name,music_name_en)
+values('2012-04-30','奇異恩典','amazing.mp3','The Amazing Grace');
 
-insert into ch_group(group_name,group_description) values('甘泉團契','作為櫻桃山華人基督教會的一份子，甘泉團契始於2003年11月，是教會最早開始的兩個家庭團契之一。當時教會尚未獨立，美國母會CHBC（櫻桃山浸信會）於2002年10月成立中文堂。在堂慶一週年的感恩日子裡，經禱告，中文堂同工們同領一個異象，決定開始家庭團契，幫助大家更多地認識神及在主內彼此相愛。
-遂於2003年11月開始了兩個家庭團契，甘泉團契即為其中之一，主要由家中有未成年孩子的家庭組成。');
+insert into ch_group(group_name,group_name_en,group_description,group_description_en) 
+values('甘泉團契','Stream','作為櫻桃山華人基督教會的一份子，甘泉團契始於2003年11月，是教會最早開始的兩個家庭團契之一。當時教會尚未獨立，美國母會CHBC（櫻桃山浸信會）於2002年10月成立中文堂。在堂慶一週年的感恩日子裡，經禱告，中文堂同工們同領一個異象，決定開始家庭團契，幫助大家更多地認識神及在主內彼此相愛。','As an integral component of CHCCC, the Stream Fellowship is mainly composed of families with non-adult children. Our members include both Christians and non-believers who are interested in seeking the truth. Every Friday evening, starting from 8pm, we get together to sing hymns, pray, give testimony, and have Bible study on topics of interest, such as family, marriage, bringing up children, parent-child relationship, and job/profession. For our children, we provide three programs according to their ages, with the purpose of bringing them to Jesus. Through committed participation, we strive for learning and applying Biblical principles to our daily life.');
+insert into ch_group(group_name,group_name_en,group_description,group_description_en) 
+values('感恩團契','Thanksgiving','感恩團契主要由櫻桃山華人基督教會的弟兄姊妹組成。我們團契的宗旨是：努力學習聖經，促進屬靈生命成長，弟兄姊妹們互相關懷、扶持、禱告，為教會的聖工以及廣傳福音去盡心盡力參與事奉。我們現在不但有每週五晚上的唱詩，查經(包括經文、專題、見證和分享) ，集體禱告，關懷和交通，以及晚間茶點，而且有時還在週六有豐富多彩的其他戶外團契活動。 ','Thanksgiving Fellowship is mainly composed of empty-nester families in CHCCC. Our purposes are: spiritual growth through diligent study of the Bible; care, support, and prayer for one another; diligent service in the church ministries. In addition to regular Friday fellowship activities including hymn singing, Bible study, special topics, sharing, testimonies, prayers, and care, etc, we sometimes also have other outdoor fellowship activities on Saturdays.');
 
-insert into ch_group_photo(photo_path,group_id) values('cherrytree.jpg',1);
-//////
+insert into ch_group_photo(photo_path,photo_description,photo_description_en,group_id) values('cherrytree.jpg','櫻花樹','Cherry Tree',1);
+insert into ch_group_photo(photo_path,photo_description,photo_description_en,group_id) values('cross.JPG','十字架', 'Cross',2);
+
+insert into ch_message_en (message_date,speaker, speaker_title,message_title) 
+values('2013-04-07','Peter Wang', 'Pastor',' Christ is Better:  A Better Priesthood');
+insert into ch_message_en (message_date,speaker, speaker_title, message_title) 
+values('2012-03-31','Joe Chou','Brother', 'Judgment and Justification');
