@@ -37,3 +37,4 @@ insert into ch_group(group_name,group_description) values('甘泉團契','作為
 遂於2003年11月開始了兩個家庭團契，甘泉團契即為其中之一，主要由家中有未成年孩子的家庭組成。');
 
 insert into ch_group_photo(photo_path,group_id) values('cherrytree.jpg',1);
+//////
