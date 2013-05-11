@@ -113,7 +113,7 @@ else {
 				<td><div class="header"><?php echo is_null($group_id) ? "创建" : "更新"; ?>团契</div><br></td>
 			</tr>
 			<tr>
-				<td class="label">团契名字:</td>
+				<td class="label">团契名字1:</td>
 				<td class="space"></td>
 				<td><input type="text" name="group_name" id="group_name" value="<?php echo $group_name ?>" /></td>
 			</tr>
