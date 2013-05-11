@@ -10,7 +10,7 @@
 	<?php include '../common/header.php'; ?>		
     
     <div id="site_content">
-      <?php include '../content/home_sidebar.php'; ?>
+      <?php include './aboutus_leftnav.php'; ?>
       <?php include '../content/history_content.php'; ?>
     </div>
     
@@ -20,4 +20,3 @@
  <?php include '../../common/bottom.php'; ?>
 </body>
 </html>
-
