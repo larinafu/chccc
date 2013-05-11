@@ -61,7 +61,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
       		move_uploaded_file($_FILES["file"]["tmp_name"], 
       			$group_image_folder . "/". $_FILES["file"]["name"]);
       		
-      		addGroupPhoto($_POST["gid"], $_FILES["file"]["name"],  $_POST["photo_description"]);
+      		addGroupPhoto($_POST["gid"], $_FILES["file"]["name"],  $_POST["photo_description"],  $_POST["photo_description_en"]);
       		//header("Location: GroupPhotoList.php?id=$group_id");
       		echo "相片上传成功，<a href='GroupPhotoList.php?id=$group_id' >添加更多</a>" ;
       	}
@@ -75,7 +75,7 @@ else
 }
 
 
-function addGroupPhoto($gid, $photo_name, $photo_desc){
+function addGroupPhoto($gid, $photo_name, $photo_desc, $photo_desc_en_){
     $db = new PDO("mysql:host=$db_host;dbname=chccc",
 		    "chccc",
 		    "53chccc2004",
@@ -83,9 +83,9 @@ function addGroupPhoto($gid, $photo_name, $photo_desc){
     
     
     $db->query("INSERT INTO ch_group_photo " .
-				"	(photo_path, photo_description, group_id) " .
+				"	(photo_path, photo_description, photo_description_en, group_id) " .
 				"	VALUES " .
-				"	('$photo_name', '$photo_desc', '$gid')");	
+				"	('$photo_name', '$photo_desc', '$photo_desc_en', '$gid')");	
 }
 ?>
 </div>

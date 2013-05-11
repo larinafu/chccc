@@ -1,4 +1,4 @@
-<?php include $_SERVER[DOCUMENT_ROOT]. '/common/db_conn.php'; ?>	
+<?php include $_SERVER['DOCUMENT_ROOT']. '/common/db_conn.php'; ?>	
 <?php
 $group_id = $_GET['id'];
 
@@ -32,7 +32,7 @@ $group_name =mysql_result($result, 0, "group_name");
 </script>
 </head>
 <body>
-<?php include $_SERVER[DOCUMENT_ROOT]. '/admin/header.php'; ?>	
+<?php include $_SERVER['DOCUMENT_ROOT']. '/admin/header.php'; ?>	
 <div align="center">	
 <h1><?php echo $group_name ?>相片管理</h1>
 
@@ -43,6 +43,7 @@ $group_name =mysql_result($result, 0, "group_name");
 		<input type="hidden" name="gid" id="gid" value= "<?php echo $group_id ?>" />
 		<input type="file" name="file" id="file"><br>
 		相片信息： <input type="text" name="photo_description" id="photo_description" />
+		相片英文信息： <input type="text" name="photo_description_en" id="photo_description_en" />
 		<input type="submit" name="submit" value="Submit">
 	</form>
 </fieldset>
@@ -60,7 +61,7 @@ mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
 
-$query="SELECT gp.photo_id as photo_id, gp.photo_path, gp.photo_description, gp.group_id, g.group_name " .
+$query="SELECT gp.photo_id as photo_id, gp.photo_path, gp.photo_description, gp.photo_description_en, gp.group_id, g.group_name, g.group_name_en " .
 		"FROM ch_group_photo gp inner join ch_group g on gp.group_id = g.group_id where gp.group_id = $group_id";
 $result=mysql_query($query);
 
@@ -75,9 +76,11 @@ if ($num>0){
 	while ($i < $num) {
 		$group_id  =mysql_result($result,$i,"group_id");
 		$group_name =mysql_result($result,$i,"group_name"); 
+		$group_name_en =mysql_result($result,$i,"group_name_en"); 
 		$photo_id = mysql_result($result,$i,"photo_id");
 		$photo_path = mysql_result($result,$i,"photo_path");
 		$photo_description  = mysql_result($result,$i,"photo_description");
+		$photo_description_en  = mysql_result($result,$i,"photo_description_en");
 	?>
 		<tr>
 			<td>
