@@ -10,11 +10,8 @@
 	$query="SELECT * FROM ch_message order by message_date desc";
 	$field_speaker="speaker";
 	$field_message_title="message_title";
-	if("en"==$language){
-		$field_speaker=$field_speaker."_".$language;
-		$field_message_title=$field_message_title."_".$language;
-		$query="select * from ch_message where speaker_en <>'' " .
-				"and message_title_en<>'' order by message_date desc";
+	if("en"==$language){	
+		$query="select * from ch_message_en order by message_date desc";
 	}
 	
 	$result=mysql_query($query);
@@ -35,7 +32,7 @@
 		echo "<tr><td>$message_date</td>" .
 				"<td>$speaker</td><td><a href='/library/$message_date.mp3'>$message_title</a></td>" .
 				"<td><a href='/library/pdf/$message_date.pdf'><img src='/images/pdf.gif'></a></td></tr>";
-		
+	
 		$i++;
 	}
 		

@@ -20,7 +20,7 @@
 	if("en"==$language){
 		$name_field=$name_field."_".$language;
 	}
-	while ($i < min(2,$num)) {
+	while ($i < min(1,$num)) {
 	
 		$music_name=mysql_result($result,$i,$name_field);
 		$music_date=mysql_result($result,$i,"music_date");
