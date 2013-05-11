@@ -18,7 +18,7 @@ values('2008-10-08','莊祖鯤牧師','不斷成長的生命');
 insert into ch_message (message_date,speaker,message_title) 
 values('2007-10-06','于慕潔長老','愛中建立主榮耀的教會');
 
-
+////////
 insert into ch_news(news_date,news_summary,sort_order)
 values('2013-03-10','三月二十九日（週五）是今年的受難日。當天晚上，教會將有中英文聯合的受難日特別聚會。聚會從晚八時開始。請大家為此代禱，並預留時間參加。',1);
 insert into ch_news(news_date,news_summary,sort_order)
