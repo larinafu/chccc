@@ -31,13 +31,13 @@ while ($i < $num) {
 			$current_url=substr($current_uri,0,$pos);
 		}		
 	}
-	echo "<td><a href='$current_url?msic_year=$year'>$year</a></td>";
+	echo "<td><a href='$current_url?music_year=$year'>$year</a></td>";
 
 	$i++;
 }
 echo "</tr></table>";
 
-//hymnS
+//MESSAGES
 $query = "SELECT * FROM ch_music WHERE YEAR(music_date)=$selected_year ORDER BY music_date DESC";
 $result = mysql_query($query);
 

@@ -45,17 +45,18 @@ $num = mysql_numrows($result);
 
 $i = 0;
 
-echo "<table style='border-bottom:1px solid #888'><tr><th>日期</th><th>講員</th><th>主題</th><th>大綱</th></tr>";
+echo "<table style='border-bottom:1px solid #888'><tr><th>日期</th><th>稱呼</th><th>講員</th><th>主題</th><th>大綱</th></tr>";
 while ($i < $num) {
 	$background=null;
 	if($i%2==0)$background="rgb(245, 245, 250)";
 	$speaker = mysql_result($result, $i, "speaker");
+	$speaker_title = mysql_result($result, $i, "speaker_title");
 	$message_title = mysql_result($result, $i, "message_title");
 	$message_date = mysql_result($result, $i, "message_date");
 
 	echo "<tr";
 	if(isset($background))echo " style='background-color:$background'";
-	echo "><td>$message_date</td><td>$speaker</td>" .
+	echo "><td>$message_date</td><td>$speaker_title</td><td>$speaker</td>" .
 			"<td><a href='/library/$message_date.mp3'>$message_title</a></td>" .
 			"<td><a href='/library/pdf/$message_date.pdf'><img src='/images/pdf.gif'></a></td></tr>";
 
