@@ -1,4 +1,4 @@
---message data
+--message data 
 insert into ch_message (message_date,speaker,message_title,speaker_en,message_title_en) 
 values('2013-04-07','于慕潔牧師','選擇那上好的福分','Pastor Yu','Choose the best blessing');
 insert into ch_message (message_date,speaker,message_title,speaker_en,message_title_en) 
