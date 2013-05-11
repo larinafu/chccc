@@ -23,6 +23,8 @@ while ($i < $num) {
 	$group_id  =mysql_result($result,$i,"group_id");
 	$group_name =mysql_result($result,$i,"group_name"); 
 	$group_description =mysql_result($result, $i, "group_description");
+	$group_name_en =mysql_result($result,$i,"group_name_en"); 
+	$group_description_en =mysql_result($result, $i, "group_description_en");
 	$sort_order  =mysql_result($result, $i, "sort_order");
 ?>
 	<tr>
