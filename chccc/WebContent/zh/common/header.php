@@ -79,7 +79,7 @@ mysql_close();
 				?>                
               </ul>	
             </li>
-            <li><a href="/events.php">最新活動</a></li>
+            <li><a href="/zh/events.php">最新活動</a></li>
             <li><a href="<?php switchLanguage('en'); ?>">English</a></li>
           </ul>
         </div>

@@ -61,7 +61,7 @@ function switchLanguage($target){
                 <li><a href="#">Mandarin</a></li>
               </ul>
             </li>
-            <li><a href="events.php">Events</a></li>
+            <li><a href="/en/events.php">Events</a></li>
             <li><a href="<?php switchLanguage('zh');?>">中文</a></li>
           </ul>
         </div>
