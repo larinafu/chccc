@@ -28,7 +28,7 @@ if (!is_null($group_name_en) and !empty($group_name_en))
 
 
 <?php
-	mysql_connect("localhost",$username,$password);
+	mysql_connect($db_host,$username,$password);
 	@mysql_select_db($database) or die( "Unable to select database");
 	mysql_query ('SET NAMES utf8');
 	

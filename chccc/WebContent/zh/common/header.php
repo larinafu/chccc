@@ -36,13 +36,8 @@ mysql_close();
 ?>
    <header>
       <div id="logo">
-        <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-        	<!--
-          <h1><a href="/index.php">櫻桃山華人基督教會</a></h1>
-          <h2>Together We Serve</h2>
-         -->
-         <img src="../../images/logos/Logo6.png" width="220" height="160" />
+        <div id="logo_text">          
+        	<a href="/index.php"><img src="../../images/logos/Logo6.png" width="220" height="160" /></a>
         </div>
       </div>
       <nav>
