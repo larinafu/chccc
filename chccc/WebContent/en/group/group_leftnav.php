@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT']. '/common/db_conn.php'; ?>		
+<?php require_once "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
 <?php
 
 mysql_connect($db_host,$username,$password);
