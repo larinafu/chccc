@@ -61,8 +61,8 @@ if (array_key_exists('save', $_POST)) {
 	}
 	
 	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
-    "$username",
-    "$password",
+   	$username,
+    $password,
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 
@@ -117,8 +117,8 @@ else {
 		$group_id  =mysql_result($result,0,"group_id");
 		$group_name =mysql_result($result,0,"group_name"); 
 		$group_description =mysql_result($result, 0, "group_description");
-		$group_name =mysql_result($result,0,"group_name_en"); 
-		$group_description =mysql_result($result, 0, "group_description_en");
+		$group_name_en =mysql_result($result,0,"group_name_en"); 
+		$group_description_en =mysql_result($result, 0, "group_description_en");
 		$sort_order  =mysql_result($result, 0, "sort_order");
 	}
 		

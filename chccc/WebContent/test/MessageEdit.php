@@ -1,4 +1,4 @@
-<?php include 'DBConfig.php'; ?>
+<?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>	
 <?php
 $message_id = $_GET['id'];
 
@@ -32,7 +32,7 @@ if (array_key_exists('save', $_POST)) {
 	$bible_verse = $_POST["bibleVerse"];
 	$bible_verse_en = $_POST["bibleVerseEn"];
 	
-	$db = new PDO('mysql:host=localhost;dbname='.$database,
+	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
     "$username",
     "$password",
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -145,57 +145,57 @@ else {
 			<tr>
 				<td class="label"></td>
 				<td class="space"></td>
-				<td><div class="header"><?php echo is_null($message_id) ? "创建" : "更新"; ?>信息</div><br></td>
+				<td><div class="header"><?php echo is_null($message_id) ? "������" : "������"; ?>������</div><br></td>
 			</tr>
 			<tr>
-				<td class="label">信息日期:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="messageDate" id="messageDate" value="<?php echo $message_date ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">中文讲员:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="messageSpeaker" id="messageSpeaker" value="<?php echo $message_speaker ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">中文信息标题:</td>
+				<td class="label">������������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="messageTitle" id="messageTitle"value="<?php echo $message_title ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">英文讲员:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="messageSpeakerEn" id="messageSpeakerEn" value="<?php echo $message_speaker_en ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">英文信息标题:</td>
+				<td class="label">������������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="messageTitleEn" id="messageTitleEn" value="<?php echo $message_title_en ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">信息音频文件:</td>
+				<td class="label">������������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="messageAudioFileName" id="messageAudioFileName" value="<?php echo $message_audioFileName ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">信息PDF文件</td>
+				<td class="label">������PDF������</td>
 				<td class="space"></td>
 				<td><input type="text" name="messagePdfFileName" id="messagePdfFileName" value="<?php echo $message_pdfFileName ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">信息视频文件:</td>
+				<td class="label">������������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="messageVideoFileName" id="messageVideoFileName" value="<?php echo $message_videoFileName ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">中文经文:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td>
 				<textarea name="bibleVerse" id="bibleVerse" rows="4" cols="100"><?php echo $bible_verse ?></textarea>
 				</td>
 			</tr>
 			<tr>
-				<td class="label">英文经文:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td><textarea name="bibleVerseEn" id="bibleVerseEn" rows="4" cols="100"><?php echo $bible_verse_en ?></textarea></td>
 			</tr>
@@ -203,8 +203,8 @@ else {
 				<td class="label"></td>
 				<td class="space"></td>
 				<td>
-					<input type="submit" name="save" value="<?php echo is_null($message_id) ? '创建' : '更新'; ?>" />&nbsp;
-					<input type="button" name="cancel" value="取消" onclick="javascript:history.back(1);" />
+					<input type="submit" name="save" value="<?php echo is_null($message_id) ? '������' : '������'; ?>" />&nbsp;
+					<input type="button" name="cancel" value="������" onclick="javascript:history.back(1);" />
 				</td>
 			</tr>
 		</table>

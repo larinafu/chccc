@@ -2,7 +2,7 @@
 <?php
 $group_id = $_GET['id'];
 
-mysql_connect("localhost",$username,$password);
+mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
 
@@ -28,7 +28,7 @@ if (!is_null($group_name) and !empty($group_name))
 
 
 <?php
-	mysql_connect("localhost",$username,$password);
+	mysql_connect($db_host,$username,$password);
 	@mysql_select_db($database) or die( "Unable to select database");
 	mysql_query ('SET NAMES utf8');
 	

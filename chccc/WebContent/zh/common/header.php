@@ -3,9 +3,10 @@
 
 function switchLanguage($target){	
 	$uri=$_SERVER["REQUEST_URI"];
-	$language="en";
-	if(preg_match("/\/zh\//",$uri)){
-		$language="zh";
+	
+	$language="zh";
+	if(preg_match("/\/en\//",$uri)){
+		$language="en";
 	}
 	
 	if($target!=$language){
@@ -13,9 +14,19 @@ function switchLanguage($target){
 		$pattern="/\/".$language."\//";
 		$replacement="/".$target."/";
 		
-		$targetUri=preg_replace("/\/".$language."\//","/".$target."/",$uri);
+		$mypos=strpos($uri,"?");
+		$path=$uri;
+		$queryStr="";
+		if($mypos!=false){
+			$path=substr($uri,0,$mypos);
+			$queryStr=substr($uri,$mypos);
+		}
+		
+		//echo("path is".$path);
+		
+		$targetUri=preg_replace("/\/".$language."\//","/".$target."/",$path);
 		if(file_exists("$_SERVER[DOCUMENT_ROOT]$targetUri"))
-			print $targetUri;
+			print $targetUri.$queryStr;
 		else print "/$target/index.php";
 	}else print $uri;
  

@@ -1,4 +1,4 @@
-<?php include 'DBConfig.php'; ?>
+<?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>	
 <?php
 $group_id = $_GET['id'];
 
@@ -18,7 +18,7 @@ if (array_key_exists('save', $_POST)) {
 	$group_description_en = $_POST["group_description_en"];
 	$sort_order = $_POST["sort_order"];
 	
-	$db = new PDO('mysql:host=localhost;dbname='.$database,
+	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
 		    "$username",
 		    "$password",
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -60,7 +60,7 @@ else {
 
 	if (!is_null($group_id)) {
 		
-		mysql_connect(localhost,$username,$password);
+		mysql_connect($db_host,$username,$password);
 		@mysql_select_db($database) or die( "Unable to select database");
 		mysql_query ('SET NAMES utf8');
 		
@@ -118,34 +118,34 @@ else {
 			<tr>
 				<td class="label"></td>
 				<td class="space"></td>
-				<td><div class="header"><?php echo is_null($group_id) ? "创建" : "更新"; ?>团契</div><br></td>
+				<td><div class="header"><?php echo is_null($group_id) ? "������" : "������"; ?>������</div><br></td>
 			</tr>
 			<tr>
-				<td class="label">团契名字:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="group_name" id="group_name" value="<?php echo $group_name ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">团契英文名字:</td>
+				<td class="label">������������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="group_name_en" id="group_name_en" value="<?php echo $group_name_en ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">团契介绍:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td>
 				<textarea name="group_description" id="group_description" rows="15" cols="100"><?php echo $group_description ?></textarea>
 				</td>
 			</tr>
 			<tr>
-				<td class="label">团契英文介绍:</td>
+				<td class="label">������������������:</td>
 				<td class="space"></td>
 				<td>
 				<textarea name="group_description_en" id="group_description_en" rows="15" cols="100"><?php echo $group_description_en ?></textarea>
 				</td>
 			</tr>
 			<tr>
-				<td class="label">排序:</td>
+				<td class="label">������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="sort_order" id="sort_order"value="<?php echo $sort_order ?>" /></td>
 			</tr>
@@ -153,8 +153,8 @@ else {
 				<td class="label"></td>
 				<td class="space"></td>
 				<td>
-					<input type="submit" name="save" value="<?php echo is_null($group_id) ? '创建' : '更新'; ?>" />&nbsp;
-					<input type="button" name="cancel" value="取消" onclick="javascript:history.back(1);" />
+					<input type="submit" name="save" value="<?php echo is_null($group_id) ? '������' : '������'; ?>" />&nbsp;
+					<input type="button" name="cancel" value="������" onclick="javascript:history.back(1);" />
 				</td>
 			</tr>
 		</table>

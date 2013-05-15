@@ -18,14 +18,14 @@
 </head>
 <body>
 <?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>	
-<?php include $_SERVER[DOCUMENT_ROOT]. '/admin/header.php'; ?>	
+<?php include "$_SERVER[DOCUMENT_ROOT]/admin/header.php" ?>	
 
 <div align="center">	
 <div class="header">信息管理</div><br>
 <a href="MessageEdit.php">创建信息</a><p/>
 <?php
 
-mysql_connect("localhost",$username,$password);
+mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
 

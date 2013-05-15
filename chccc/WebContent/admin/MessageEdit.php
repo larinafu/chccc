@@ -69,8 +69,8 @@ if (array_key_exists('save', $_POST)) {
 	$bible_verse_en = $_POST["bibleVerseEn"];
 	
 	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
-    "$username",
-    "$password",
+    $username,
+    $password,
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 

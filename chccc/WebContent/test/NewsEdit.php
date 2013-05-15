@@ -1,4 +1,4 @@
-<?php include 'DBConfig.php'; ?>
+<?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>	
 <?php
 $news_id = $_GET['id'];
 
@@ -24,9 +24,9 @@ if (array_key_exists('save', $_POST)) {
 	$sort_order = $_POST["sortOrder"];
 	
 	
-	$db = new PDO('mysql:host=localhost;dbname='.$database,
-    "$username",
-    "$password",
+	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
+    $username,
+    $password,
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 
@@ -67,7 +67,7 @@ else {
 
 	if (!is_null($news_id)) {
 		
-		mysql_connect(localhost,$username,$password);
+		mysql_connect($db_host,$username,$password);
 		@mysql_select_db($database) or die( "Unable to select database");
 		mysql_query ('SET NAMES utf8');
 		
@@ -126,35 +126,35 @@ else {
 			<tr>
 				<td class="label"></td>
 				<td class="space"></td>
-				<td><div class="header"><?php echo is_null($news_id) ? "创建" : "更新"; ?>新闻</div><br></td>
+				<td><div class="header"><?php echo is_null($news_id) ? "������" : "������"; ?>������</div><br></td>
 			</tr>
 			<tr>
-				<td class="label">新闻日期:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="newsDate" id="newsDate" value="<?php echo $news_date ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">中文新闻摘要:</td>
+				<td class="label">������������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="newsSummary" id="newsSummary"value="<?php echo $news_summary ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">中文新闻:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td><textarea name="news" id="news" rows="4" cols="100"><?php echo $news ?></textarea></td>
 			</tr>
 			<tr>
-				<td class="label">英文新闻摘要:</td>
+				<td class="label">������������������:</td>
 				<td class="space"></td>
 				<td><input type="text" name="newsSummaryEn" id="newsSummaryEn" value="<?php echo $news_summary_en ?>" /></td>
 			</tr>
 			<tr>
-				<td class="label">英文新闻:</td>
+				<td class="label">������������:</td>
 				<td class="space"></td>
 				<td><textarea name="newsEn" id="newsEn" rows="4" cols="100"><?php echo $news_en ?></textarea></td>
 			</tr>
 			<tr>
-				<td class="label">排序</td>
+				<td class="label">������</td>
 				<td class="space"></td>
 				<td><input type="text" name="sortOrder" id="sortOrder" value="<?php echo $sort_order ?>" /></td>
 			</tr>
@@ -162,8 +162,8 @@ else {
 				<td class="label"></td>
 				<td class="space"></td>
 				<td>
-					<input type="submit" name="save" value="<?php echo is_null($news_id) ? '创建' : '更新'; ?>" />&nbsp;
-					<input type="button" name="cancel" value="取消" onclick="javascript:history.back(1);" />
+					<input type="submit" name="save" value="<?php echo is_null($news_id) ? '������' : '������'; ?>" />&nbsp;
+					<input type="button" name="cancel" value="������" onclick="javascript:history.back(1);" />
 				</td>
 			</tr>
 		</table>

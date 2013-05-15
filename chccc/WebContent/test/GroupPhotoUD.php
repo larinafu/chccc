@@ -1,4 +1,4 @@
-<?php include 'DBConfig.php'; ?>	
+<?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>	
 <?php
 $group_id =  $_POST["gid"];
 $photo_id =  $_POST["pid"];
@@ -7,9 +7,9 @@ $command = $_POST["command"];
 if (!empty($command)){
 	$group_id =  $_POST["group_id"];
 	//delete photo
-	$db = new PDO('mysql:host=localhost;dbname=chccc',
-		    "chccc",
-		    "53chccc2004",
+	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
+		    $username,
+		    $password,
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     
      $db->query("DELETE FROM ch_group_photo WHERE photo_id = $photo_id");
@@ -68,9 +68,9 @@ else
 
 
 function addGroupPhoto($gid, $photo_name, $photo_desc, $photo_desc_en){
-    $db = new PDO('mysql:host=localhost;dbname=chccc',
-		    "chccc",
-		    "53chccc2004",
+    	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
+		    $username,
+		    $password,
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     
     

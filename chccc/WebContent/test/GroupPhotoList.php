@@ -2,7 +2,7 @@
 <?php
 $group_id = $_GET['id'];
 
-mysql_connect("localhost",$username,$password);
+mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
 
@@ -21,7 +21,7 @@ $group_name =mysql_result($result, 0, "group_name");
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
  <script type="text/javascript">
 	function deletePhoto(photo_id) {
-		if (confirm('删除相片')) {
+		if (confirm('������������')) {
 			//alert (document.getElementById('gid').value);
 			document.getElementById("pid").value = photo_id;
 			document.getElementById("command").value = "delete";
@@ -32,15 +32,15 @@ $group_name =mysql_result($result, 0, "group_name");
 </script>
 </head>
 <body>
-<h1><?php echo $group_name ?>相片管理</h1>
+<h1><?php echo $group_name ?>������������</h1>
 
 <br>
 <fieldset style="width:600px" >
-	<legend align="left"><strong>添加相片</strong></legend>
+	<legend align="left"><strong>������������</strong></legend>
 	<form action="GroupPhotoUD.php" id="frmPhoto" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="gid" id="gid" value= "<?php echo $group_id ?>" />
 		<input type="file" name="file" id="file"><br>
-		相片信息： <input type="text" name="photo_description" id="photo_description" />
+		��������������� <input type="text" name="photo_description" id="photo_description" />
 		<input type="submit" name="submit" value="Submit">
 	</form>
 </fieldset>
@@ -54,7 +54,7 @@ $group_name =mysql_result($result, 0, "group_name");
 
 <p>
 <?php
-mysql_connect("localhost",$username,$password);
+mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
 
