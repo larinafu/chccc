@@ -53,12 +53,31 @@ while ($i < $num) {
 	$speaker_title = mysql_result($result, $i, "speaker_title");
 	$message_title = mysql_result($result, $i, "message_title");
 	$message_date = mysql_result($result, $i, "message_date");
+	$message_audio_file =mysql_result($result, $i, "message_audio_file_name");
+	$message_pdf_file =mysql_result($result, $i, "message_pdf_file_name");
+	
+	if(!isset($message_audio_file)){
+		$message_audio_file=$message_date."wma";
+	}
+	if(!isset($message_pdf_file)){
+		$message_pdf_file=$message_date."pdf";
+	}
+	
+	$pdf_exists=false;
+	if(file_exists("$_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file")){
+		$pdf_exists=true;
+		echo("file is $_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file");
+	}
 
 	echo "<tr";
 	if(isset($background))echo " style='background-color:$background'";
 	echo "><td>$message_date</td><td>$speaker_title</td><td>$speaker</td>" .
-			"<td><a href='/library/$message_date.mp3'>$message_title</a></td>" .
-			"<td><a href='/library/pdf/$message_date.pdf'><img src='/images/pdf.gif'></a></td></tr>";
+			"<td><a href='$audio_library$message_audio_file'>$message_title</a></td>" .
+			"<td>";
+	if($pdf_exists){
+			echo "<a href='$pdf_library$message_pdf_file'><img src='/images/pdf.gif'></a>";
+	}
+	echo "</td></tr>";
 
 	$i++;
 }
