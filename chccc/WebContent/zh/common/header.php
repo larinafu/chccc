@@ -1,4 +1,4 @@
-<?php require_once "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>		
+﻿<?php require_once "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>		
 <?php
 
 function switchLanguage($target){	
@@ -46,9 +46,18 @@ mysql_close();
 
 ?>
    <header>
-      <div id="logo">
+     
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+        	<!--
+          <h1><a href="/index.php">櫻桃山華人基督教會</a></h1>
+          <h2>Together We Serve</h2>
+         -->
+         
+
         <div id="logo_text">          
-        	<a href="/index.php"><img src="../../images/logos/Logo6.png" width="220" height="160" /></a>
+        	<a href="/index.php"><img src="../../images/logos/Logo.png" width="300" height="160" /></a>
+
         </div>
       </div>
       <nav>
