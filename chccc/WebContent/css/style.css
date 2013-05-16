@@ -25,7 +25,7 @@ article, aside, figure, footer, header, hgroup, nav, section {
 }
 
 body { 
-  font: normal .80em arial, sans-serif;
+  font: BOLD.80em arial, sans-serif;
   background: #FFF url(../../images/back.jpg) no-repeat center fixed;
   color: #222;
 }
@@ -278,9 +278,10 @@ nav {
   float: left;
   width: 130px;
   margin: 0 0 17px 0;
-  background: #22003C;
-  color: #222;
-  background: #FFF;
+  /*background: #22003C;
+  color: #222;*/
+  color: #FFFFFF;
+  background: #2B60DE;
   border: 1px solid #eee;
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;
@@ -292,28 +293,34 @@ nav {
 
 .leftnav h3 { 
   padding: 9px 15px 5px 0;
-  color: #222;
-  font: 110% 'News Cycle', arial, sans-serif;
+  color: #FFFFFF;
+  font: Bold, 110% 'News Cycle', arial, sans-serif;
 }
 
 .leftnav ul { 
+  font: Bold, 110% 'News Cycle', arial, sans-serif;
   margin: 15px 0 15px 0;
 }
 
 .leftnav ul li { 
+  font: Bold, 110% 'News Cycle', arial, sans-serif;
   list-style-type: none;
 } 
 
 .leftnav li a, .leftnav li a:hover { 
-  color: #222;
+  font: Bold, 110% 'News Cycle', arial, sans-serif;
+  color: #FFFFFF;
   text-decoration: none;
 } 
 
 .leftnav li a:hover { 
+font: Bold, 110% 'News Cycle', arial, sans-serif;
+color:  #B1FB17;
   /* text-decoration: underline; */
 } 
 
 .leftnav_item, .content_item { 
+font: Bold, 110% 'News Cycle', arial, sans-serif;
   padding: 15px 0;
 }
 
