@@ -54,7 +54,7 @@ mysql_close();
       <nav>
         <div id="menu_container">
           <ul class="sf-menu" id="nav">
-            <li><a href="/en/index.php">Homepage</a></li>
+            <li><a href="/en/index.php">Home</a></li>
             <li><a href="/en/aboutus/statement.php">Introduction</a>
                <ul>
                 <li><a href="/en/aboutus/statement.php">Faith Statement</a></li>
