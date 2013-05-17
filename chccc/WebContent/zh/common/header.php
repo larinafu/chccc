@@ -43,14 +43,11 @@ mysql_close();
 ?>
    <header>     
       <div id="logo">
-        <div id="logo_text">          
-
-        	
-<Center><img src="../../images/logos/Logo0.png" width="930" height="160"></center>
-
+        <div id="logo_text">           	
+<Center><img src="../../images/logos/Logo0.png" width="932" height="160"></center>
         </div>
       </div>
-<p><P>
+<p><p>
       <nav>
         <div id="menu_container">
           <ul class="sf-menu" id="nav">
