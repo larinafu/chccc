@@ -315,8 +315,8 @@ nav {
 
 .leftnav li a:hover { 
 font: Bold, 110% 'News Cycle', arial, sans-serif;
-color:  #B1FB17;
-  /* text-decoration: underline; */
+color:  #CCFF00;
+text-decoration: underline;
 } 
 
 .leftnav_item, .content_item { 
@@ -620,7 +620,7 @@ Author: Jurriaan Roelofs
 
 /* Configuration of menu width */
 html body ul.sf-menu ul,html body ul.sf-menu ul li { 
-  width: 170px;
+  width: 90px;
 }
 
 html body ul.sf-menu ul ul { 
@@ -636,6 +636,7 @@ ul.sf-menu,ul.sf-menu * {
 ul.sf-menu { 
   display: block;
   position: relative;
+
 }
   
 ul.sf-menu li { 
@@ -643,6 +644,8 @@ ul.sf-menu li {
   list-style: none;
   float: left;
   position: relative;
+
+
 }
   
 ul.sf-menu li:hover { 
@@ -652,12 +655,13 @@ ul.sf-menu li:hover {
 ul.sf-menu a { 
   display: block;
   position: relative;
+
 }
   
 ul.sf-menu ul { 
   position: absolute;
   left: 0;
-  width: 150px; 
+  
   top: auto;
   left: -999999px;
 }
@@ -674,6 +678,7 @@ ul.sf-menu ul li {
 ul.sf-menu ul ul { 
   top: 0;
   margin: 0 0 0 150px;
+
 }
 
 ul.sf-menu li:hover ul,ul.sf-menu li:focus ul,ul.sf-menu li.sf-hover ul, 
@@ -731,7 +736,8 @@ ul#nav ul {
 }
 
 ul#nav li a { 
-  padding:8px 20px 6px 20px;
+  padding:8px 20px 6px 45px;
+<!--This is where you can change the width of the top menu-->
   font: 110% , arial, sans-serif;
   font-weight:bold;
   text-decoration: none;
@@ -745,7 +751,9 @@ ul#nav li a:hover, ul#nav li a:focus {
 }
 
 ul#nav ul li a { 
-  padding: 13px 20px 6px 20px;
+  padding: 13px 1px 1px 3px;
+<!--This is where you can change the submenu font distance-->
+<!--Top, Right, Bottom, Left-->
 }
 
 ul#nav ul li a:hover, ul#nav ul li a:focus { 
