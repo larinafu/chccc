@@ -35,29 +35,16 @@ function switchLanguage($target){
 mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
-
 $query="SELECT * FROM ch_group order by sort_order";
 $result=mysql_query($query);
-
 $num=mysql_numrows($result);
-
 mysql_close();
 
-
 ?>
-   <header>
-     
-        <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-        	<!--
-          <h1><a href="/index.php">櫻桃山華人基督教會</a></h1>
-          <h2>Together We Serve</h2>
-         -->
-         
-
+   <header>     
+      <div id="logo">
         <div id="logo_text">          
         	<a href="/index.php"><img src="../../images/logos/Logo.png" width="300" height="160" /></a>
-
         </div>
       </div>
       <nav>

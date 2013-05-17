@@ -48,7 +48,7 @@ mysql_close();
    <header>
   	 <div id="logo">
         <div id="logo_text">
-         <a href="/index.php"><img src="../../images/logos/Logo6.png" width="220" height="160" /></a>
+         <a href="/index.php"><img src="../../images/logos/Logo.png" width="300" height="160" /></a>
         </div>
       </div>        
       <nav>
