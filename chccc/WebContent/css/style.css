@@ -145,7 +145,7 @@ ol li {
   -moz-border-radius: 13px 13px 13px 13px;
   -webkit-border: 13px 13px 13px 13px;
   background: transparent url(../../images/main.png);
-  padding-bottom: 30px;
+  padding-bottom: 30px; 
 }
 
 header { 
@@ -155,7 +155,7 @@ header {
 
 #logo { 
   width: 930px;
-  height: 179px;
+  height: 165px;
   background: transparent;
   color: #888;
   padding: 0;
@@ -190,7 +190,7 @@ header {
 nav { 
   height: 44px;
   width: 930px;
-  margin: -50px auto 0 auto;
+  margin: auto;
   color: #222;
   background: #ddd; /* Show a solid color for older browsers */
   background: -moz-linear-gradient(#fff, #ddd);
@@ -213,7 +213,7 @@ nav {
 #site_content { 
   width: 930px;
   overflow: hidden;
-  margin: 0px auto 0 auto;
+  margin: 35px auto 0 auto;
   padding: 15px 0 15px 0;
 } 
 

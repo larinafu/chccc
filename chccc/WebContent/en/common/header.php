@@ -1,4 +1,5 @@
-<?php require_once "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>	
+<?php require_once "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
+
 <?php
 
 function switchLanguage($target){	
@@ -45,10 +46,10 @@ mysql_close();
 
 
 ?>
-   <header>
+   <header style="padding-top:15px">
   	 <div id="logo">
         <div id="logo_text">
-         <a href="/index.php"><img src="../../images/logos/Logo.png" width="300" height="160" /></a>
+         <a href="/index.php"><img src="../../images/logos/Logo0.png" width="932" height="160"></a>
         </div>
       </div>        
       <nav>

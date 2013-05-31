@@ -8,8 +8,7 @@
 
 <body>
 <?php include_once("../common/analyticstracking.php") ?>
-  <div id="main">
-	<?php include './common/header.php'; ?>		
+  <div id="main"><?php include "./common/header.php"; ?>		
 
     <div id="site_content">
     	<!-- call image_roller -->		    
