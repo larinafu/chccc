@@ -1,5 +1,7 @@
-﻿<?php require_once "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
+<?php require_once "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
+
 <?php
+
 function switchLanguage($target){	
 	$uri=$_SERVER["REQUEST_URI"];
 	
@@ -20,28 +22,37 @@ function switchLanguage($target){
 			$path=substr($uri,0,$mypos);
 			$queryStr=substr($uri,$mypos);
 		}
-
+		
+		//echo("path is".$path);
+		
 		$targetUri=preg_replace("/\/".$language."\//","/".$target."/",$path);
 		if(file_exists("$_SERVER[DOCUMENT_ROOT]$targetUri"))
 			print $targetUri.$queryStr;
 		else print "/$target/index.php";
-	}else print $uri; 
+	}else print $uri;
+ 
 }
+
 mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
+
 $query="SELECT * FROM ch_group order by sort_order";
 $result=mysql_query($query);
-$num=mysql_numrows($result);
-mysql_close();
-?><header>     
-      <div id="logo">
-        <div id="logo_text">           	
-		<a href="/index.php"><img src="../../images/logos/Logo0.png" width="932" height="160"></a>
-        </div>
-      </div>
 
-      <nav>
+$num=mysql_numrows($result);
+
+mysql_close();
+
+
+?>
+   <header style="padding-top:15px">
+  	 <div id="logo">
+        <div id="logo_text">
+         <a href="/index.php"><img src="../../images/logos/Logo0.png" width="932" height="160"></a>
+        </div>
+      </div>        
+       <nav>
         <div id="menu_container">
           <ul class="sf-menu" id="nav">
             <li><a href="/zh/index.php">主頁</a></li>
@@ -81,3 +92,7 @@ mysql_close();
         </div>
       </nav>
     </header>
+
+
+
+ 

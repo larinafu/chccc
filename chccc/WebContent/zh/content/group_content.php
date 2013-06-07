@@ -1,4 +1,4 @@
-<?php include '../../test/DBConfig.php'; ?>		
+<?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
 <?php
 $group_id = $_GET['id'];
 
