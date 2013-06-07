@@ -45,7 +45,8 @@
       		$("#makeMeScrollable").smoothDivScroll({
 				mousewheelScrolling: "allDirections",
 				manualContinuousScrolling: true,
-				autoScrollingMode: "onStart"
+				autoScrollingMode: "onStart",
+				autoScrollingInterval: 30
 			});
     });
   </script>
