@@ -48,6 +48,7 @@
 			});
     });
   </script>
+  <script type="text/javascript" src="http://webplayer.yahooapis.com/player.js"></script>
 </body>
 </html>
 
