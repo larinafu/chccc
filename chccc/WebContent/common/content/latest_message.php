@@ -33,9 +33,13 @@
 		$message_audio_file =mysql_result($result, $i, "message_audio_file_name");
 		$message_pdf_file =mysql_result($result, $i, "message_pdf_file_name");
 		
-		if(!isset($message_audio_file)){
-			$message_audio_file=$message_date."wma";
+		if(!isset($message_audio_file)||""==$message_audio_file){
+			$date_msg=new DateTime($message_date);	
+			//echo "date is ".$date_msg;		
+			$message_audio_file=date_format($date_msg, 'mdY').".wma";
+			//echo "audio file is ".$message_audio_file;
 		}
+		
 		if(!isset($message_pdf_file)){
 			$message_pdf_file=$message_date."pdf";
 		}
