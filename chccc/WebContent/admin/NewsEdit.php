@@ -44,6 +44,7 @@ $news =  "";
 $news_summary_en =  "";
 $news_en =  "";
 $sort_order =  "";
+$published = "";
 
 
 
@@ -58,6 +59,7 @@ if (array_key_exists('save', $_POST)) {
 	$news_en = $_POST["newsEn"];
 	
 	$sort_order = $_POST["sortOrder"];
+	$published = $_POST["published"];
 	
 	if (empty($sort_order)) {
 		$sort_order = 1;
@@ -80,19 +82,33 @@ $db = new PDO('mysql:host='.$db_host.';dbname='.$database,
 		*/
 		
 		$db->query("INSERT INTO ch_news " .
-				"	(news_date, news_summary, news, news_summary_en, news_en, sort_order) " .
+				"	(news_date, news_summary, news, news_summary_en, news_en, sort_order, published) " .
 				"	VALUES " .
-				"	('$news_date', '$news_summary', '$news', '$news_summary_en', '$news_en', '$sort_order')");
+				"	('$news_date', '$news_summary', '$news', '$news_summary_en', '$news_en', '$sort_order', '$published')");
 		echo "创建成功";	
 	}
 	else {
+		
+		/*echo "UPDATE ch_news SET " .
+				"	news_date = '$news_date', " .
+				"	news_summary = '$news_summary', " .
+				"	news='$news', " .
+				"	news_summary_en = '$news_summary_en', " .
+				"	news_en = '$news_en', " .
+				"	sort_order = '$sort_order', " .
+				"	published = '$published' " .
+				" WHERE news_id = $news_id";
+				
+		echo "<br>";
+		*/
 		$db->query("UPDATE ch_news SET " .
 				"	news_date = '$news_date', " .
 				"	news_summary = '$news_summary', " .
 				"	news='$news', " .
 				"	news_summary_en = '$news_summary_en', " .
 				"	news_en = '$news_en', " .
-				"	sort_order = '$sort_order' " .
+				"	sort_order = '$sort_order', " .
+				"	published = '$published' " .
 				" WHERE news_id = $news_id");
 				
 		echo "更新成功";
@@ -127,6 +143,7 @@ else {
 		$news_en = mysql_result($result, 0, "news_en"); 
 		
 		$sort_order = mysql_result($result, 0, "sort_order"); 	
+		$published = mysql_result($result, 0, "published");
 	}
 		
 	?>
@@ -167,6 +184,11 @@ else {
 				<td class="label">排序</td>
 				<td class="space"></td>
 				<td><input type="text" name="sortOrder" id="sortOrder" value="<?php echo $sort_order ?>" /></td>
+			</tr>
+			<tr>
+				<td class="label">发布</td>
+				<td class="space"></td>
+				<td><input type="text" name="published" id="published" value="<?php echo $published ?>" /></td>
 			</tr>
 			<tr>
 				<td class="label"></td>

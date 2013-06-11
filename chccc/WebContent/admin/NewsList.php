@@ -48,7 +48,12 @@ while ($i < $num) {
 	$news_en = mysql_result($result,$i,"news_en");
 	$sort_order = mysql_result($result,$i,"sort_order");
 		
+	$published =  mysql_result($result,$i,"published");
 	
+	/*if ($published== 1) 
+	{
+	}
+	*/
 	
 	?>
 	<tr>
