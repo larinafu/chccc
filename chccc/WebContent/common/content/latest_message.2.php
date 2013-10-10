@@ -24,7 +24,7 @@
 	
 	$i=0;
 	          
-	while ($i < min(3,$num)) {
+	while ($i < min(1,$num)) {
 	
 		$speaker=mysql_result($result,$i,$field_speaker);
 		$speaker_title=mysql_result($result,$i,$field_speaker_title);
@@ -36,7 +36,7 @@
 		if(!isset($message_audio_file)||""==$message_audio_file){
 			$date_msg=new DateTime($message_date);	
 			//echo "date is ".$date_msg;		
-			$message_audio_file=date_format($date_msg, 'mdY').".mp3";
+			$message_audio_file=date_format($date_msg, 'mdY').".wma";
 			//echo "audio file is ".$message_audio_file;
 		}
 		
@@ -46,7 +46,7 @@
 		
 		$pdf_exists=false;
 		
-		if(!empty($message_pdf_file)&&file_exists("$_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file")){
+		if(file_exists("$_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file")){
 			$pdf_exists=true;			
 		}
 		
@@ -58,7 +58,16 @@
 		else
 		{
 				echo "<tr><td>$message_date</td>" .
-					"<td>$speaker$speaker_title</td><td><a href='$audio_library$message_audio_file'>$message_title</a></td><td>";	
+					"<td>$speaker$speaker_title</td><td><a onclick=\"show('msgPlayer')\" href='#'>$message_title</a></td><td id='msgPlayer' style='display:none'>" .
+					"<object id=\"MediaPlayer\" width=\"192\" height=\"35\" type=\"video/x-ms-asf\">
+						<param name=\"FileName\" value=\"$audio_library$message_audio_file\" >
+						<param name=\"autostart\" value=\"false\">
+						<param name=\"ShowControls\" value=\"true\">
+						<param name=\"ShowStatusBar\" value=\"false\">
+						<param name=\"ShowDisplay\" value=\"false\">
+						<embed type=\"application/x-mplayer2\" src=\"$audio_library$message_audio_file\" 
+						width=\"192\" height=\"30\" ShowControls=\"1\" ShowStatusBar=\"0\" ShowDisplay=\"0\" autostart=\"0\" />
+					</object></td><td>";	
 		}
 		if($pdf_exists){
 				echo "<a href='$pdf_library$message_pdf_file'><img src='/images/pdf.gif'></a>";
@@ -69,6 +78,11 @@
 	}
 		
 ?>
+<script type="text/javascript">
+function show(target){
+document.getElementById(target).style.display = 'block';
+}
+</script>
 </table>
 
 

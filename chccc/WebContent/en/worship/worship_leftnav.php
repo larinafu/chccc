@@ -2,6 +2,7 @@
         <div class="leftnav">
         	<h3>Worship</h3>
 	        <ul>
+	        	<li><a href="/en/worship/english_ministry.php">English Ministry</a></li>
 		        <li><a href="/en/worship/children_worship.php">Children Worship</a></li>
 		        <li><a href="/en/worship/hymns.php">Hymns</a></li>
 		        <li><a href="/en/worship/messages.php">Online Messages</a></li>

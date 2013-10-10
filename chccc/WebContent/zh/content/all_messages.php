@@ -56,17 +56,18 @@ while ($i < $num) {
 	$message_audio_file =mysql_result($result, $i, "message_audio_file_name");
 	$message_pdf_file =mysql_result($result, $i, "message_pdf_file_name");
 	
-	if(!isset($message_audio_file)){
-		$message_audio_file=$message_date."wma";
+	$date_msg=new DateTime($message_date);	
+	if(empty($message_audio_file)){			
+		$message_audio_file=date_format($date_msg, 'mdY').".wma";
 	}
-	if(!isset($message_pdf_file)){
-		$message_pdf_file=$message_date."pdf";
+	if(empty($message_pdf_file)){
+		$message_pdf_file="P".date_format($date_msg, 'mdY').".pdf";
 	}
 	
 	$pdf_exists=false;
 	if(file_exists("$_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file")){
 		$pdf_exists=true;
-		echo("file is $_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file");
+		//echo("file is $_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file");
 	}
 
 	echo "<tr";

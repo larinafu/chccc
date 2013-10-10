@@ -67,6 +67,7 @@ mysql_close();
             </li>
             <li><a href="/en/worship/children_worship.php">Worship</a>
               <ul>
+              	<li><a href="/en/worship/english_ministry.php">English Ministry</a></li>
                 <li><a href="/en/worship/children_worship.php">Children Worship</a></li>
                 <li><a href="/en/worship/hymns.php">Hymns</a></li>
                 <li><a href="/en/worship/messages.php">Messages</a></li>

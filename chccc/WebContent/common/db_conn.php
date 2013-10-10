@@ -1,8 +1,8 @@
 <?php
 $username="chccc";
-$password="53chccc2004";
+$password="53chccc2004";//"Uvfy5RYduLj8fEMa"; //
 $database="chccc";
-$db_host="localhost";
-$audio_library="/Library/audio/";
-$pdf_library="/Library/pdf/";
+$db_host="localhost"; //;//mysql
+$audio_library="http://www.cherryhillccc.org/ChineseSundayMessage/";
+$pdf_library="/ChineseSundayMessage/PDF/";
 ?>
