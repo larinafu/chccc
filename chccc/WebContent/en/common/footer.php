@@ -9,7 +9,8 @@
 	  	<li class="left"><a href="/en/quicklinks/daily_bible.php">Daily Bible</a></li>
 	  	<li class="left"><a href="/en/quicklinks/english_learning.php">English Study</a></li>
 	    <li class="left"><a href="http://www.christianstudy.com/lifehymns.html">Life Hymns</a></li>
-	  	<li class="left"><a href="http://cherryhillccc.org/english/index.htm">Previous Site</a></li>
+	  	<li class="left"><a href="http://www.shu-hao-lin.com">Hymns Online</a></li>
+	  		  	<li class="left"><a href="http://cherryhillccc.org/english/index.htm">Previous Site</a></li>
 	  </ul>
   </div>
     </footer>
