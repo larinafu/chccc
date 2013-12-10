@@ -44,21 +44,39 @@ $result = mysql_query($query);
 $num = mysql_numrows($result);
 
 $i = 0;
+            
 
-echo "<table style='border-bottom:1px solid #888'><tr><th>Date</th><th>Title</th><th>Speaker</th><th>Message</th><th>Subject</th></tr>";
+echo "<table style='border-bottom:1px solid #888'><tr><th>Date</th><th>Speaker</th><th>Message</th><th>Summary</th></tr>";
 while ($i < $num) {
 	$background=null;
 	if($i%2==0)$background="rgb(245, 245, 250)";
 	$speaker = mysql_result($result, $i, "speaker");
-	$speaker_title = mysql_result($result, $i, "speaker_title");
+//	$speaker_title = mysql_result($result, $i, "speaker_title");
 	$message_title = mysql_result($result, $i, "message_title");
 	$message_date = mysql_result($result, $i, "message_date");
+    $message_audio_file =mysql_result($result, $i, "message_audio_file_name");
+    $message_pdf_file =mysql_result($result, $i, "message_pdf_file_name");
+    
+	$pdf_exists=false;
+	
+	if(!empty($message_pdf_file)&&file_exists("$_SERVER[DOCUMENT_ROOT]$pdf_library_en$message_pdf_file")){
+	        $pdf_exists=true;                        
+	}
+  
+    echo "<tr><td>$message_date</td>" .
+            "<td>$speaker</td><td><a href='$audio_library_en$message_audio_file'>$message_title</a></td><td>";        
 
-	echo "<tr";
-	if(isset($background))echo " style='background-color:$background'";
-	echo "><td>$message_date</td><td>$speaker_title</td><td>$speaker</td>" .
-			"<td><a href='/library/$message_date.mp3'>$message_title</a></td>" .
-			"<td><a href='/library/pdf/$message_date.pdf'><img src='/images/pdf.gif'></a></td></tr>";
+    if($pdf_exists){
+                    	echo "<a href='$pdf_library_en$message_pdf_file'><img src='/images/pdf.gif'></a>";			 				
+    }
+    echo "</td></tr>";
+	
+	
+//	echo "<tr";
+//	if(isset($background))echo " style='background-color:$background'";
+//	echo "><td>$message_date</td><td>$speaker</td>" .
+//			"<td><a href='$audio_library_en$message_audio_file'>$message_title</a></td>" .
+//			"<td><a href='$pdf_library_en$message_pdf_file'><img src='/images/pdf.gif'></a></td></tr>";
 
 	$i++;
 }
