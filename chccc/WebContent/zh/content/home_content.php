@@ -2,7 +2,7 @@
 <?php
 	$language = LanguageUtil::getCurrentLanguage();
 	$title_news="教會消息";
-	$title_message="主日信息";
+	$title_message="信息";
 	$title_songs="主日詩班獻詩";
 	if("en"== $language){
 		$title_news="News";

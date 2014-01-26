@@ -2,6 +2,7 @@
 <div class="subcontent">
 <li>網絡信息</li>
 <?php
+$audio_lib_path="/ChineseSundayMessage/";
 mysql_connect($db_host, $username, $password);
 @ mysql_select_db($database) or die("Unable to select database");
 mysql_query('SET NAMES utf8');
@@ -58,23 +59,32 @@ while ($i < $num) {
 	
 	$date_msg=new DateTime($message_date);	
 	if(empty($message_audio_file)){			
-		$message_audio_file=date_format($date_msg, 'mdY').".wma";
+		$message_audio_file=date_format($date_msg, 'mdY').".mp3";
 	}
 	if(empty($message_pdf_file)){
 		$message_pdf_file="P".date_format($date_msg, 'mdY').".pdf";
 	}
 	
 	$pdf_exists=false;
+	$mp3_exists=false;
 	if(file_exists("$_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file")){
 		$pdf_exists=true;
-		//echo("file is $_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file");
+		//echo("<!-- file is $_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file -->");
+	}
+
+	if(file_exists("$_SERVER[DOCUMENT_ROOT]$audio_lib_path$message_audio_file")){
+		$mp3_exists=true;
+		//echo("<!-- file is $_SERVER[DOCUMENT_ROOT]$audio_lib_path$message_audio_file -->");
 	}
 
 	echo "<tr";
 	if(isset($background))echo " style='background-color:$background'";
-	echo "><td>$message_date</td><td>$speaker_title</td><td>$speaker</td>" .
-			"<td><a href='$audio_library$message_audio_file'>$message_title</a></td>" .
-			"<td>";
+	
+	echo "><td>$message_date</td><td>$speaker_title</td><td>$speaker</td><td>";
+			if($mp3_exists){
+				echo "<a href='$audio_library$message_audio_file'>$message_title</a>";
+				}
+		echo	"</td><td>";
 	if($pdf_exists){
 			echo "<a href='$pdf_library$message_pdf_file'><img src='/images/pdf.gif'></a>";
 	}

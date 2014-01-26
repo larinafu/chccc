@@ -5,6 +5,7 @@
 </head>
 
 <body>
+<?php include_once("$_SERVER[DOCUMENT_ROOT]/common/analyticstracking.php") ?>
   <div id="main">
 	<?php include '../common/header.php'; ?>		
     
