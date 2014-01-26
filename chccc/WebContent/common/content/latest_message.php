@@ -24,7 +24,7 @@
 	
 	$i=0;
 	          
-	while ($i < min(3,$num)) {
+	while ($i < min(5,$num)) {
 	
 		$speaker=mysql_result($result,$i,$field_speaker);
 		$speaker_title=mysql_result($result,$i,$field_speaker_title);
@@ -70,5 +70,7 @@
 		
 ?>
 </table>
-
+<div id="more_msg" style="margin-top: -20px;margin-bottom: 20px;">
+<a href="/zh/worship/messages.php">更多信息</a>
+</div>
 

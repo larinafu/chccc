@@ -2,7 +2,7 @@
 <?php
 	$language = LanguageUtil::getCurrentLanguage();
 	$title_news="教會消息";
-	$title_message="主日信息";
+	$title_message="信息";
 	$title_songs="主日詩班獻詩";
 	if("en"== $language){
 		$title_news="News";
@@ -17,7 +17,7 @@
         </div>
         <div class="latest_message">
           <h3><?php echo ($title_message);?></h3>
-		  <?php include "$_SERVER[DOCUMENT_ROOT]/common/content/latest_message.php"; ?>
+		  <?php include "$_SERVER[DOCUMENT_ROOT]/common/content/latest_message.php"; ?>		  
         </div>
      <div class="latest_message">
           <h3><?php echo ($title_songs);?></h3>
