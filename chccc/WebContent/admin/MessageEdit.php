@@ -64,6 +64,7 @@ if (array_key_exists('save', $_POST)) {
 	$message_title_en = $_POST["messageTitleEn"];
 	$message_pdfFileName = $_POST["messagePdfFileName"];
 	$message_videoFileName = $_POST["messageVideoFileName"];
+	$message_published=$_POST["published"];
 	
 	$bible_verse = $_POST["bibleVerse"];
 	$bible_verse_en = $_POST["bibleVerseEn"];
@@ -84,10 +85,10 @@ if (array_key_exists('save', $_POST)) {
 		*/
 		
 		$db->query("INSERT INTO ch_message " .
-				"	(message_date, speaker, message_title, message_audio_File_Name, speaker_en, message_title_en, message_pdf_file_name, message_video_file_name, bible_verses, bible_verses_en) " .
+				"	(message_date, speaker, message_title, message_audio_File_Name, speaker_en, message_title_en, message_pdf_file_name, message_video_file_name, bible_verses, bible_verses_en,published) " .
 				"	VALUES " .
 				"	('$message_date', '$message_speaker', '$message_title', '$message_audioFileName', '$message_speaker_en', '$message_title_en', '$message_pdfFileName', '$message_videoFileName', " .
-				"	'$bible_verse', '$bible_verse_en')");	
+				"	'$bible_verse', '$bible_verse_en',$message_published)");	
 				
 		echo "创建成功";
 	}
@@ -102,7 +103,8 @@ if (array_key_exists('save', $_POST)) {
 				"	message_video_file_name = '$message_videoFileName', " .
 				"	bible_verses = '$bible_verse', " .
 				"	bible_verses_en = '$bible_verse_en', " .
-				"	message_title_en = '$message_title_en' " .
+				"	message_title_en = '$message_title_en', " .
+				"	published = $message_published " .
 				" WHERE message_id = $message_id");
 		echo "更新成功";
 	}
@@ -133,6 +135,7 @@ else {
 		$message_speaker = mysql_result($result, 0, "speaker");
 		$message_title = mysql_result($result, 0, "message_title");
 		$message_audioFileName = mysql_result($result, 0, "message_audio_file_name");
+		$message_published = mysql_result($result, 0, "published");
 		
 		$message_speaker_en = mysql_result($result, 0, "speaker_en");
 		$message_title_en = mysql_result($result, 0, "message_title_en");
@@ -204,6 +207,11 @@ else {
 				<td class="label">英文经文:</td>
 				<td class="space"></td>
 				<td><textarea name="bibleVerseEn" id="bibleVerseEn" rows="4" cols="100"><?php echo $bible_verse_en ?></textarea></td>
+			</tr>
+			<tr>
+				<td class="label">发布:</td>
+				<td class="space"></td>
+				<td><input type="text" name="published" id="published" value="<?php echo $message_published ?>" /></td>
 			</tr>
 			<tr>
 				<td class="label"></td>
