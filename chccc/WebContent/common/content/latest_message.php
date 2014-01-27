@@ -7,7 +7,7 @@
 	mysql_connect($db_host,$username,$password);
 	@mysql_select_db($database) or die( "Unable to select database");
 	mysql_query ('SET NAMES utf8');
-	$query="SELECT * FROM ch_message order by message_date desc";
+	$query="SELECT * FROM ch_message where published = 1 order by message_date desc";
 	$field_speaker="speaker";
 	$field_speaker_title="speaker_title";
 	$field_message_title="message_title";
