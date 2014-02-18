@@ -9,7 +9,7 @@ INSERT INTO ch_message (speaker, speaker_title, message_title, message_date, mes
 INSERT INTO ch_message (speaker, speaker_title, message_title, message_date, message_audio_file_name) VALUES( '張儒民' , '弟兄', '多結果子的人生', '2012-05-06','05062012.wma');
 INSERT INTO ch_message (speaker, speaker_title, message_title, message_date, message_audio_file_name) VALUES( '陳欽文' , '牧師', '頭一件神跡', '2012-04-29','04292012.wma');
 INSERT INTO ch_message (speaker, speaker_title, message_title, message_date, message_audio_file_name) VALUES( '林丰欽' , '牧師', '我們的話語', '2012-04-22','04222012.wma');
-INSERT INTO ch_message (speaker, speaker_title, message_title, message_date, message_audio_file_name) VALUES( '*黃子嘉' , '牧師', '奉獻與成聖', '2012-04-15','04152012.wma');
+INSERT INTO ch_message (speaker, speaker_title, message_title, message_date, message_audio_file_name) VALUES( '黃子嘉' , '牧師', '奉獻與成聖', '2012-04-15','04152012.wma');
 INSERT INTO ch_message (speaker, speaker_title, message_title, message_date, message_audio_file_name) VALUES( '陳欽文' , '牧師', '', '2012-04-08','04082012.wma');
 INSERT INTO ch_message (speaker, speaker_title, message_title, message_date, message_audio_file_name) VALUES( '樂大端' , '長老', '情歸何處', '2012-04-01','04012012.wma');
 INSERT INTO ch_message (speaker, speaker_title, message_title, message_date, message_audio_file_name) VALUES( '陳欽文' , '牧師', '生命的見証', '2012-03-25','03252012.wma');

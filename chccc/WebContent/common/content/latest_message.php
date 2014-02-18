@@ -53,15 +53,15 @@
 		if("en"==$language)
 		{
 			echo "<tr><td>$message_date</td>" .
-					"<td>$speaker_title $speaker</td><td><a href='$audio_library$message_audio_file'>$message_title</a></td><td>";	
+					"<td>$speaker_title $speaker</td><td><a href='$audio_library$message_audio_file' target='new'>$message_title</a></td><td>";	
 		}
 		else
 		{
 				echo "<tr><td>$message_date</td>" .
-					"<td>$speaker$speaker_title</td><td><a href='$audio_library$message_audio_file'>$message_title</a></td><td>";	
+					"<td>$speaker$speaker_title</td><td><a href='$audio_library$message_audio_file' target='new'>$message_title</a></td><td>";	
 		}
 		if($pdf_exists){
-				echo "<a href='$pdf_library$message_pdf_file'><img src='/images/pdf.gif'></a>";
+				echo "<a href='$pdf_library$message_pdf_file' target='new'><img src='/images/pdf.gif'></a>";
 		}
 		echo "</td></tr>";
 	
