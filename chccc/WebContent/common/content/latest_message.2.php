@@ -53,7 +53,7 @@
 		if("en"==$language)
 		{
 			echo "<tr><td>$message_date</td>" .
-					"<td>$speaker_title $speaker</td><td><a href='$audio_library$message_audio_file'>$message_title</a></td><td>";	
+					"<td>$speaker_title $speaker</td><td><a href='$audio_library_en$message_audio_file'>$message_title</a></td><td>";	
 		}
 		else
 		{
