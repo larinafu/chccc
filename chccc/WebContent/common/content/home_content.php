@@ -17,7 +17,7 @@
         </div>
         <div class="latest_message">
           <h3><?php echo ($title_message);?></h3>
-		  <?php include "$_SERVER[DOCUMENT_ROOT]/common/content/latest_message.php"; ?>		  
+		  <?php include "$_SERVER[DOCUMENT_ROOT]/common/content/latest_message.php"; ?>
         </div>
      <div class="latest_message">
           <h3><?php echo ($title_songs);?></h3>
