@@ -1,0 +1,1 @@
+ALTER TABLE `chccc`.`ch_message` ADD is_trainning bool DEFAULT FALSE AFTER published; 

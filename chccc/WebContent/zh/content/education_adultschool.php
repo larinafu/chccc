@@ -1,5 +1,5 @@
 <div class="subcontent">
-<li>2014年3-5月成人主日學各班課程介紹</li>
+<li>2014年3-5月主日學各班課程介紹</li>
 <br>
 <p>
 <li><u>慕道班</u>（吳冀川、徐雷，101室）</li>
@@ -14,12 +14,13 @@
 
 <br>
 <p>
-<li><u>舊約概論（上）</u>（趙曉蒼，吳錫民，？室）</li>
+<li><u>舊約概論（上）</u>（趙曉蒼、吳錫民，302室） </li>
 <br>舊約佔有整本聖經四分之三的篇幅，是由約三十位作者，從摩西開始到瑪拉基結束，其中經過了約一千年的時間才寫作完成。其中的內容非常豐富，包括了神的創造，人的墮落，神的公義，神的揀選與神的救贖。讀舊約可幫助我們認識新約的背景，並更明白耶穌基督的救恩。然而許多信徒都發現讀舊約很難。本課程將以半年的時間，逐卷分析舊約各書卷的信息與意義，期望能幫助上課的信徒對舊約能有初步的了解，並能自己讀舊約聖經。
 </p>
 <br>
 <p>
-<li><u>個人佈道與宣教</u>（于慕潔牧師，主堂）</li>
+<li><u>個人談道與宣教入門</u>（于慕潔牧師，主堂）</li>
+<br>主完成救贖復活升天前，囑咐門徒的最後「一件事」，就是從耶路撒冷直到地極作祂的見證。作見證在近處就是個人佈道，到遠方或跨文化就是宣教，去分享主為我們所作所成就的恩，並能簡潔清淅的講述基本救恩真理、和如何接受祂。主應許必與我們同在。本課將介紹幾種常用簡易傳福音方法及宣教入門，課堂將邀請不同同工示範、鼓勵學員自願作3-5分鐘見證分享。
 </p>
 
 <br>
@@ -38,7 +39,7 @@
 <br>
 <p>
 <li><u>English Class</u> (A. Bryan Turner, Common’s  Servery)</li>
-<br>TBD
+<br>The Adult English Sunday school class will be using the “wired word.” It is an outstanding Sunday school lesson that combines recent events in the world with Bible scriptures. Come join us as we apply the scriptures to real events in an open discussion format that gives everyone a chance to voice their beliefs.
 </p>
 
 </div>
