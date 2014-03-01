@@ -243,7 +243,7 @@ else {
 			<tr>
 				<td class="label">培訓:</td>
 				<td class="space"></td>
-				<td><input type="checkbox" name="isTraining" id="isTraining"  <?php echo $message_isTraining_checked ?>/></td>
+				<td><input type="checkbox" name="isTraining" id="isTraining"  <?php echo $message_isTraining_checked ?>/>&nbsp;培訓信息請打勾</td>
 			</tr>
 			<tr>
 				<td class="label"></td>
