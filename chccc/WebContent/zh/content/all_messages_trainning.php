@@ -104,6 +104,8 @@ while ($i < $num) {
 	echo "><td>$message_date</td><td>$speaker</td><td>";
 			if($mp3_exists){
 				echo "<a href='$audio_library$message_audio_file'>$message_title</a>";
+				}else {
+				echo "$message_title";
 				}
 		echo	"</td><td>";
 	if($pdf_exists){
