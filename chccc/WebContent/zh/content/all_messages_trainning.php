@@ -5,7 +5,7 @@ $audio_lib_path="/ChineseSundayMessage/";
 mysql_connect($db_host, $username, $password);
 @ mysql_select_db($database) or die("Unable to select database");
 mysql_query('SET NAMES utf8');
-$query = "SELECT DISTINCT YEAR(MESSAGE_DATE) AS message_year FROM ch_message WHERE is_training = 0 AND published = 1 ORDER BY YEAR(MESSAGE_DATE) DESC";
+$query = "SELECT DISTINCT YEAR(MESSAGE_DATE) AS message_year FROM ch_message WHERE is_training = 1 AND published = 1 ORDER BY YEAR(MESSAGE_DATE) DESC";
 $result = mysql_query($query);
 
 
@@ -55,7 +55,7 @@ while ($i < $num) {
 
 
 //MESSAGES
-$query = "SELECT * FROM ch_message WHERE YEAR(message_date)=$selected_year AND is_training = 0 AND published = 1 ORDER BY message_date DESC";
+$query = "SELECT * FROM ch_message WHERE YEAR(message_date)=$selected_year AND is_training = 1 AND published = 1 ORDER BY message_date DESC";
 
 //echo $query;
 //exit();
