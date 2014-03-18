@@ -19,9 +19,18 @@
 <body>
 <?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>	
 <?php include "$_SERVER[DOCUMENT_ROOT]/admin/header.php" ?>	
+<?php 
+	$is_training = 0;
+	$message_category = "主日";
+	
+	if (isset($_GET['training']) && $_GET['training'] =="1") {
+		$message_category = "培訓";
+		$is_training = "1";
+	}
+?>
 
 <div align="center">	
-<div class="header">信息管理</div><br>
+<div class="header"><?php echo $message_category ?>信息管理</div><br>
 <a href="MessageEdit.php">创建信息</a><p/>
 <?php
 
@@ -29,7 +38,11 @@ mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
 
-$query="SELECT * FROM ch_message order by message_date desc";
+$query="SELECT * FROM ch_message WHERE is_training = " . $is_training . " ORDER BY message_id DESC";
+
+//echo $query;
+//exit();
+
 $result=mysql_query($query);
 
 $num=mysql_numrows($result);

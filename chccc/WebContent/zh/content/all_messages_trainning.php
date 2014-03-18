@@ -1,22 +1,37 @@
 <?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
 <div class="subcontent">
-<li>網絡信息</li>
 <?php
 $audio_lib_path="/ChineseSundayMessage/";
 mysql_connect($db_host, $username, $password);
 @ mysql_select_db($database) or die("Unable to select database");
 mysql_query('SET NAMES utf8');
-$query = "SELECT DISTINCT YEAR(MESSAGE_DATE) AS message_year FROM ch_message WHERE is_training = 0 ORDER BY YEAR(MESSAGE_DATE) DESC";
+$query = "SELECT DISTINCT YEAR(MESSAGE_DATE) AS message_year FROM ch_message WHERE is_training = 1 AND published = 1 ORDER BY YEAR(MESSAGE_DATE) DESC";
 $result = mysql_query($query);
+
+
+if (!$result) {
+	echo "<font color='red'>稍後添加</font>";
+	exit();	
+}
+
+
 
 //we are using isset() to avoid the "Notice: Undefined Index" from php 
 
 $num = mysql_numrows($result);
+
+if ($num == 0) {
+	echo "<font color='red'>稍後添加</font>";
+	exit();	
+}
+
 $selected_year=null;
 if(isset($_GET['message_year']))$selected_year=$_GET['message_year']; 
 
 $i = 0;
-echo "<table><tr>";
+
+
+//echo "<table><tr>";
 while ($i < $num) {
 
 	$year = mysql_result($result, $i, "message_year");
@@ -32,21 +47,27 @@ while ($i < $num) {
 			$current_url=substr($current_uri,0,$pos);
 		}		
 	}
-	echo "<td><a href='$current_url?message_year=$year'>$year</a></td>";
+	//echo "<td><a href='$current_url?message_year=$year'>$year</a></td>";
 
 	$i++;
 }
-echo "</tr></table>";
+//echo "</tr></table>";
+
 
 //MESSAGES
-$query = "SELECT * FROM ch_message WHERE YEAR(message_date)=$selected_year AND is_training = 0 ORDER BY message_date DESC";
+$query = "SELECT * FROM ch_message WHERE YEAR(message_date)=$selected_year AND is_training = 1 AND published = 1 ORDER BY message_date DESC";
+
+//echo $query;
+//exit();
+
 $result = mysql_query($query);
+
 
 $num = mysql_numrows($result);
 
 $i = 0;
 
-echo "<table style='border-bottom:1px solid #888'><tr><th>日期</th><th>稱呼</th><th>講員</th><th>主題</th><th>大綱</th></tr>";
+echo "<table style='border-bottom:1px solid #888'><tr><th>日期</th><th>講員</th><th>主題</th><th>大綱</th></tr>";
 while ($i < $num) {
 	$background=null;
 	if($i%2==0)$background="rgb(245, 245, 250)";
@@ -80,9 +101,11 @@ while ($i < $num) {
 	echo "<tr";
 	if(isset($background))echo " style='background-color:$background'";
 	
-	echo "><td>$message_date</td><td>$speaker_title</td><td>$speaker</td><td>";
+	echo "><td>$message_date</td><td>$speaker</td><td>";
 			if($mp3_exists){
 				echo "<a href='$audio_library$message_audio_file'>$message_title</a>";
+				}else {
+				echo "$message_title";
 				}
 		echo	"</td><td>";
 	if($pdf_exists){

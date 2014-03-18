@@ -36,6 +36,7 @@
 	<?php include $_SERVER[DOCUMENT_ROOT]. '/admin/header.php'; ?>	
 	<div align="center">
 <?php
+
 $message_id = $_GET['id'];
 
 $message_date = "";
@@ -47,6 +48,12 @@ $message_speaker_en = "";
 $message_title_en = "";
 $message_pdfFileName = "";
 $message_videoFileName = "";
+
+$message_published = "0";
+$message_published_checked = "";
+
+$message_isTraining = "0";
+$message_isTraining_checked = ""; 
 
 $bible_verse = "";
 $bible_verse_en = "";
@@ -64,10 +71,21 @@ if (array_key_exists('save', $_POST)) {
 	$message_title_en = $_POST["messageTitleEn"];
 	$message_pdfFileName = $_POST["messagePdfFileName"];
 	$message_videoFileName = $_POST["messageVideoFileName"];
-	$message_published=$_POST["published"];
 	
 	$bible_verse = $_POST["bibleVerse"];
 	$bible_verse_en = $_POST["bibleVerseEn"];
+
+	if (isset($_POST['published'])) {
+		$message_published = "1";
+	}	
+	
+	if (isset($_POST['isTraining'])) {
+		$message_isTraining = "1";
+	}
+	
+
+	//echo $message_isTraining;
+	//exit(); 
 	
 	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
     $username,
@@ -85,10 +103,10 @@ if (array_key_exists('save', $_POST)) {
 		*/
 		
 		$db->query("INSERT INTO ch_message " .
-				"	(message_date, speaker, message_title, message_audio_File_Name, speaker_en, message_title_en, message_pdf_file_name, message_video_file_name, bible_verses, bible_verses_en,published) " .
+				"	(message_date, speaker, message_title, message_audio_File_Name, speaker_en, message_title_en, message_pdf_file_name, message_video_file_name, bible_verses, bible_verses_en,published, is_training) " .
 				"	VALUES " .
 				"	('$message_date', '$message_speaker', '$message_title', '$message_audioFileName', '$message_speaker_en', '$message_title_en', '$message_pdfFileName', '$message_videoFileName', " .
-				"	'$bible_verse', '$bible_verse_en',$message_published)");	
+				"	'$bible_verse', '$bible_verse_en',$message_published, $message_isTraining)");	
 				
 		echo "创建成功";
 	}
@@ -104,7 +122,8 @@ if (array_key_exists('save', $_POST)) {
 				"	bible_verses = '$bible_verse', " .
 				"	bible_verses_en = '$bible_verse_en', " .
 				"	message_title_en = '$message_title_en', " .
-				"	published = $message_published " .
+				"	published = $message_published, " .
+				"	is_training = $message_isTraining " .
 				" WHERE message_id = $message_id");
 		echo "更新成功";
 	}
@@ -144,7 +163,15 @@ else {
 		
 		$bible_verse = mysql_result($result, 0, "bible_verses");
 		$bible_verse_en = mysql_result($result, 0, "bible_verses_en");
+		$message_isTraining = mysql_result($result, 0, "is_training");
 		
+		if ($message_isTraining ==1) {
+			$message_isTraining_checked = "checked";
+		}
+		
+		if($message_published == 1 ) {
+			$message_published_checked = "checked";
+		}
 	}
 		
 	?>
@@ -211,7 +238,12 @@ else {
 			<tr>
 				<td class="label">发布:</td>
 				<td class="space"></td>
-				<td><input type="text" name="published" id="published" value="<?php echo $message_published ?>" /></td>
+				<td><input type="checkbox" name="published" id="published"  <?php echo $message_published_checked ?>/></td>
+			</tr>
+			<tr>
+				<td class="label">培訓:</td>
+				<td class="space"></td>
+				<td><input type="checkbox" name="isTraining" id="isTraining"  <?php echo $message_isTraining_checked ?>/>&nbsp;培訓信息請打勾</td>
 			</tr>
 			<tr>
 				<td class="label"></td>
