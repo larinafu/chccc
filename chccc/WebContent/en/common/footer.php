@@ -14,4 +14,7 @@
 	  </ul>
   </div>
     </footer>
+    <div class="contactus" >
+    Contact Us：<a href="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=299+Browning+Lane,+Cherry+Hill,+NJ&aq=0&oq=299+&sll=39.876481,-75.000658&sspn=0.017966,0.020106&ie=UTF8&hq=&hnear=299+Browning+Ln,+Cherry+Hill,+Camden,+New+Jersey+08003&t=m&z=14&ll=39.88168,-75.00342&output=embed" target="new">299 Browning Lane，Cherry Hill, NJ 08003</a> (856-428-1398)
+    </div>
     <p style="margin-top:10px;text-align:center">&copy; Cherry Hill Chinese Christian Church</p>
