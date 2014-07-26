@@ -16,7 +16,7 @@
     	<!-- call image_roller -->		    
   		<?php include '../common/image_roller.php'; ?> 
       
-      	<?php include '../common/content/home_content.php'; ?> 
+      	<?php include '../common/content/home_content_en.php'; ?> 
     </div>
     
  	<?php include './common/footer.php'; ?>
