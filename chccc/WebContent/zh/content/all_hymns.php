@@ -51,12 +51,12 @@ while ($i < $num) {
 	if($i%2==0)$background="rgb(245, 245, 250)";
 	$music_name = mysql_result($result, $i, "music_name");
 	$music_date = mysql_result($result, $i, "music_date");
-	$music_audio_file_name = mysql_result($result, $i, "music_audio_file_name");
+	$music_file = mysql_result($result, $i, "music_audio_file_name");
 
 	echo "<tr";
 	if(isset($background))echo " style='background-color:$background'";
 	echo "><td>$music_date</td>" .
-			"<td><a href='/ChineseSundayMessage/$music_audio_file_name'>$music_name</a></td>";
+			"<td><a href='$audio_library$music_file'>$music_name</a></td>";
 
 	$i++;
 }

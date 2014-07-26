@@ -27,7 +27,7 @@
 		$music_file=mysql_result($result,$i,"music_audio_file_name");
 		
 		echo "<tr><td>$music_date</td>" .
-				"<td><a href='$audio_library/$music_file'>$music_name</a></td>" ;
+				"<td><a href='$audio_library$music_file'>$music_name</a></td>" ;
 		
 		$i++;
 	}
