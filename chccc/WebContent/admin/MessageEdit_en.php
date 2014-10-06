@@ -97,13 +97,10 @@ if (array_key_exists('save', $_POST)) {
 				"	speaker = '$message_speaker', " .
 				"	message_title='$message_title', " .
 				"	message_audio_file_name = '$message_audioFileName', " .
-				"	speaker_zh = '$message_speaker_en', " .
 				"	message_pdf_file_name = '$message_pdfFileName', " .
 				"	message_video_file_name = '$message_videoFileName', " .
-				"	bible_verses = '$bible_verse', " .
-				"	bible_verses_zh = '$bible_verse_en', " .
-				"	message_title_zh = '$message_title_en' " .
-				" WHERE message_id = $message_id");
+				"	bible_verses = '$bible_verse' " .
+				"   WHERE message_id = $message_id");
 		echo "更新成功";
 	}
 	
