@@ -84,10 +84,10 @@ if (array_key_exists('save', $_POST)) {
 		*/
 		
 		$db->query("INSERT INTO ch_message_en " .
-				"	(message_date, speaker, message_title, message_audio_File_Name, speaker_zh, message_title_zh, message_pdf_file_name, message_video_file_name, bible_verses, bible_verses_zh) " .
+				"	(message_date, speaker, message_title, message_audio_File_Name, message_pdf_file_name, message_video_file_name, bible_verses) " .
 				"	VALUES " .
-				"	('$message_date', '$message_speaker', '$message_title', '$message_audioFileName', '$message_speaker_en', '$message_title_en', '$message_pdfFileName', '$message_videoFileName', " .
-				"	'$bible_verse', '$bible_verse_en')");	
+				"	('$message_date', '$message_speaker', '$message_title', '$message_audioFileName',  '$message_pdfFileName', '$message_videoFileName', " .
+				"	'$bible_verse')");	
 				
 		echo "创建成功";
 	}
