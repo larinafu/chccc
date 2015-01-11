@@ -231,7 +231,7 @@ mysql_close();
              	<ul>
                 	<li><a href="/zh/education/introduction.php">教育事工簡介</a></li>
                 	<li><a href="/zh/education/trainning.php">同工培訓</a></li>
-                	<li><a href="#">2014秋季主日學</a>
+                	<li><a href="#">2014冬季主日學</a>
                 		<ul>
 		                	<li><a href="/zh/education/adult_school.php">成人主日學</a></li>
 		                	<li><a href="/zh/education/children_school.php">兒童主日學</a></li>
@@ -243,6 +243,7 @@ mysql_close();
 		                	<li><a href="/zh/education/library_catalog_2014-04-05_toweb.xlsx">書目鏈接</a></li>
 		            	</ul>
                 	</li>
+                	<li><a href="/zh/magazines/12thCelebration.pdf">2014年刊</a></li>
               	</ul>	
             </li>
             <li><a href="#">宣道</a>
