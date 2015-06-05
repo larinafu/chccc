@@ -7,7 +7,7 @@ $language = LanguageUtil::getCurrentLanguage();
 mysql_connect($db_host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 mysql_query ('SET NAMES utf8');
-$query="SELECT * FROM ch_news where published=1 and news_summary_en<>'' order by news_date desc,sort_order";
+$query="SELECT * FROM ch_news_en where published=1 and news_summary_en<>'' order by news_date desc,sort_order";
 $result=mysql_query($query);
 
 $num=mysql_numrows($result);
