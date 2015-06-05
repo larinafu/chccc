@@ -8,4 +8,4 @@ news_en varchar(65535),
 sort_order SMALLINT DEFAULT 2,
 published bool DEFAULT TRUE,
 PRIMARY KEY(news_id)
-);
+); 
