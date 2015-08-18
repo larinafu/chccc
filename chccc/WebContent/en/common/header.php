@@ -87,7 +87,7 @@ mysql_close();
 				?>                
               </ul>	
             </li>
-            <li><a href="/en/events.php">News</a></li>
+            <li><a href="/en/events.php">Calendar</a></li>
             <li><a href="<?php switchLanguage('zh'); ?>">中文</a></li>
           </ul>
         </div>

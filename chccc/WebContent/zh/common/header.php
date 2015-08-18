@@ -244,6 +244,7 @@ mysql_close();
 		            	</ul>
                 	</li>
                 	<li><a href="/zh/magazines/12thCelebration.pdf">2014年刊</a></li>
+                	<li><a href="/zh/education/esl.php">英文進修</a></li>
               	</ul>	
             </li>
             <li><a href="#">宣道</a>
