@@ -75,10 +75,12 @@ else
 }
 
 
-function addGroupPhoto($gid, $photo_name, $photo_desc, $photo_desc_en_){
-    	$db = new PDO('mysql:host='.$db_host.';dbname='.$database,
-   			$username,
-   			 $password,
+function addGroupPhoto($gid, $photo_name, $photo_desc, $photo_desc_en){
+		//Yinghui - 8/21/2015, put the hard coded value here because of the global variables 
+		//are not obtainable inside this function
+    	$db = new PDO('mysql:host=mysql;dbname=chccc',
+   			"chccc",
+   			 "Uvfy5RYduLj8fEMa",
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     
     
