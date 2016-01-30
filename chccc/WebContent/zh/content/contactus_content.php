@@ -1,6 +1,7 @@
 <div class="subcontent">
 <table id="contactus">
 <tr><td width="14%">于慕潔</td><td>主任牧師</td><td>myu@cherryhillccc.org</td><td>856-428-1398</td></tr>
+<tr><td>滕靖</td><td>執事會主席</td><td>tengj6@yahoo.com</td><td>856-429-2106</td></tr>
 <tr><td>方家義</td><td>財務</td><td>jfang99@yahoo.com</td><td>631-590-1098</td></tr>
 <tr><td>鍾禮皋</td><td>敬拜/文書</td><td>pchong02@temple.edu</td><td>856-751-9428</td></tr>
 <tr><td>張劉芳</td><td>教育</td><td>liufangzhang@gmail.com</td><td>609-926-8974</td></tr>
