@@ -71,6 +71,6 @@
 ?>
 </table>
 <div id="more_msg" style="margin-top: -20px;margin-bottom: 20px;">
-<a href="/zh/worship/messages.php">更多信息</a>
+<a href="/en/worship/messages.php">More Sunday Messages</a>
 </div>
 
