@@ -106,3 +106,6 @@ create table ch_group_photo (
 );
 
 
+INSERT INTO ch_message 
+(speaker, speaker_title, message_title, message_date, message_audio_file_name, bible_verses) VALUES
+('于慕杰', '牧师', '天国的福音', '2013-06-02', '06022013.wma', '');
