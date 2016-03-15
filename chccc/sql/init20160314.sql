@@ -28,6 +28,7 @@ create index idx_ch_message_speaker on ch_message(speaker);
 /*modify the table ch_message to support trainning message.
 */
 ALTER TABLE `chccc`.`ch_message` ADD is_training bool DEFAULT FALSE AFTER published; 
+ALTER TABLE `chccc`.`ch_message` ALTER COLUMN speaker_title SET DEFAULT '';
 
 create table ch_message_en(
 	message_id MEDIUMINT NOT NULL AUTO_INCREMENT,
