@@ -1,5 +1,5 @@
 <div class="subcontent">
-<li>2016 春季季度主日学课程 </li>
+<li>2016 夏季季度主日学课程 </li>
 
 <br>
 <p>
