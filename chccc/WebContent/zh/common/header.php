@@ -167,7 +167,7 @@ mysql_close();
 
 		<ul class="sf-menu" id="nav-left">
 
-          	    <li style="padding: 8px 0px 6px 6px;">主任牧師：于慕潔牧師</li>
+          	    <li style="padding: 8px 0px 6px 6px;"></li>
 
           	</ul>
 
