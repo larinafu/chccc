@@ -18,6 +18,7 @@
                 </li>
                 <li><a href="/zh/magazines/12thCelebration.pdf">2014年刊</a></li>
                 <li><a href="/zh/magazines/13thCelebration.pdf">2015年刊</a></li>
+                <li><a href="/zh/magazines/14thCelebration.pdf">2016年刊</a></li>
                 <li><a href="/zh/education/esl.php">英文進修</a></li>
 	        </ul>
         </div>
