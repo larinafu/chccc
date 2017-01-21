@@ -7,7 +7,7 @@ Our main goal is to reach the community around us - and through missionary endea
 worshiping with us and carrying out God’s Great Commission.
 
 <p>The English ministry is an integral part of the CHCCC, and consists of an active Youth Program and a full-scale Children's Program 
-(nursery-high school) with English as the common language among the attendants. On a typical Sunday, about 40 youths and 50 children attend 
+(nursery-high school) with English as the common language among the attendees. On a typical Sunday, about 70 youths and 60 children attend 
 worship services and Sunday school classes, in addition to about 30 younger children attending the nursery and toddlers' classes. We also have 
 regular fellowship on Friday evening at the church.
 </p>
@@ -32,13 +32,12 @@ regular fellowship on Friday evening at the church.
 
 <li>Friday</li>
 <table style="width:70%">
-<tr><td>English "fellowship about fellowship"  </td><td>07:00 p.m. – 09:30 p.m.</td></tr>
 <tr><td>Youth Fellowship </td><td>08:00 p.m. – 10:00 p.m.</td></tr>
 </table>
 
 <li>Contact Information</li>
 <table style="width:70%">
-<tr><td>Blake and Claire Smitley: </td><td>856-745-7789 or Blakea42@hotmail.com</td></tr>
-<tr><td>Bryan Turner:  </td><td>720-301-0777 or abturner81@yahoo.com</td></tr>
+<tr><td>Danny Chan: </td><td>267-288-7169 or dannychccc@gmail.com</td></tr>
+<tr><td>Phil Misthal:  </td><td>856-520-9259 or pmisthal@hotmail.com</td></tr>
 </table>
 </div>

@@ -60,7 +60,7 @@ mysql_close();
                <ul>
                 <li><a href="/en/aboutus/statement.php">Faith Statement</a></li>
                 <li><a href="/en/aboutus/vision.php">Mission Statement</a></li>
-                <li><a href="/en/aboutus/history.php">Chruch History</a></li>
+                <li><a href="/en/aboutus/history.php">Church History</a></li>
                 <li><a href="/en/aboutus/map.php">Map</a></li>
                 <li><a href="/en/aboutus/contactus.php">Contact Us</a></li>
               </ul>		
