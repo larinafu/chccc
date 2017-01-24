@@ -7,6 +7,7 @@
 	<a href="NewsList.php">新闻管理</a>&nbsp;&nbsp;&nbsp;
 	<a href="GroupList.php">团契管理</a>&nbsp;&nbsp;&nbsp;
 	<a href="hymnList.php">诗歌管理</a>&nbsp;&nbsp;&nbsp;
+	<a href="MessageExtraList.php?tid=3">每日灵修管理</a>&nbsp;&nbsp;&nbsp;
 </div>
 <hr />
 <p />
