@@ -69,6 +69,8 @@ while ($i < $num) {
 	$message_published = mysql_result($result, $i, "published");
 	if ($message_published==0){
 		$bg_color = "#FCEAE6";
+	} else {
+		$bg_color = "";
 	}
 ?>
 	<tr bgcolor="<?php echo $bg_color ?>">
