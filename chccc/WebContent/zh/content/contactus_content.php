@@ -5,7 +5,7 @@
 <tr><td>楊華清</td><td>財務</td><td>kevinyang1@gmail.com</td><td>405-473-3572</td></tr>
 <tr><td>鍾禮皋</td><td>敬拜</td><td>pchong02@temple.edu</td><td>856-751-9428</td></tr>
 <tr><td>張劉芳</td><td>教育</td><td>liufangzhang@gmail.com</td><td>609-926-8974</td></tr>
-<tr><td>陳文聰	</td><td>英語/青少年</td><td>metplayer@yahoo.com</td><td>267-288-7169</td></tr>
+<tr><td>陳文聰	</td><td>英語/青少年</td><td>dannychccc@gmail.com</td><td>267-288-7169</td></tr>
 <tr><td>劉亞霖</td><td>宣道</td><td>yalinliu@hotmail.com</td><td>215-327-7641</td></tr>
 
 <tr><td>滕靖</td><td>團契</td><td>tengj6@yahoo.com</td><td>856-429-2106</td></tr>
