@@ -188,7 +188,7 @@ header {
 }
 
 nav { 
-  height: 70px;
+  height: 100px;
   width: 930px;
   margin: auto;
   color: #222;
@@ -717,6 +717,7 @@ ul ul span.sf-arrow {
 /* Theming the menu */
 ul#nav { 
   float: right;
+  height: 140px;
 }
 
 ul#nav ul { 
