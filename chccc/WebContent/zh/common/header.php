@@ -114,7 +114,7 @@ mysql_close();
 				?>                
               </ul>	
             </li>
- 			<li><a href="/zh/devotion/devotion.php">天天遇见神</a>
+ 			<li><a href="/zh/devotion/devotion.php">天天遇見神</a>
             </li>
             <li><a href="/zh/events.php">最新活動</a></li>
             <li><a href="<?php switchLanguage('en'); ?>">English</a></li>
