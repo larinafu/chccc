@@ -8,9 +8,10 @@
 	@mysql_select_db($database) or die( "Unable to select database");
 	mysql_query ('SET NAMES utf8');
 	/*
-	 type 3 means it is the devotion message in ch_meesage_extra table 
+	 type 3 means it is the devotion message in ch_meesage_extra table £¬ 
+	 also, only limit to display the top 30 published message
 	 */
-	$query="SELECT * FROM ch_message_extra WHERE published = 1 and message_type_id = 3 and message_date <=  CURDATE() ORDER BY message_date DESC";
+	$query="SELECT * FROM ch_message_extra WHERE published = 1 and message_type_id = 3 and message_date <=  CURDATE() ORDER BY message_date DESC LIMIT 30";
 	$field_speaker="speaker";
 	$field_speaker_title="speaker_title";
 	$field_message_title="message_title";

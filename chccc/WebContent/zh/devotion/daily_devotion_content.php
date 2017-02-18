@@ -1,5 +1,5 @@
 <?php
-$title_message="信息";
+$title_message="每日靈修信息";
 ?>
 
 <div class="subcontent">
