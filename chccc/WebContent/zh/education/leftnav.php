@@ -4,7 +4,7 @@
 	        <ul>
 		        <li><a href="/zh/education/introduction.php">教育事工簡介</a></li>
                 <li><a href="/zh/education/trainning.php">同工培訓</a></li>
-                <li><a href="#" style="text-decoration:none;">2016夏季主日學</a>
+                <li><a href="#" style="text-decoration:none;"><?php echo ($sundaySchool_menu);?></a>
                 	<ul>
 		                <li style="padding: 0 0 4px 20px;"><a href="/zh/education/adult_school.php">成人主日學</a></li>
 		                <li style="padding: 0 0 4px 20px;"><a href="/zh/education/children_school.php">兒童主日學</a></li>

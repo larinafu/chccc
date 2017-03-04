@@ -1,4 +1,5 @@
 <?php require_once "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
+<?php require_once "$_SERVER[DOCUMENT_ROOT]/common/chccc_prop.php" ?>
 <?php
 function switchLanguage($target){	
 	$uri=$_SERVER["REQUEST_URI"];
@@ -72,7 +73,7 @@ mysql_close();
 			 <li><a href="#">教育</a>
              	<ul>
                 	<li><a href="/zh/education/introduction.php">教育事工簡介</a></li>
-                	<li><a href="#">2016夏季主日學</a>
+                	<li><a href="#"><?php echo ($sundaySchool_menu);?></a>
                 		<ul>
 		                	<li><a href="/zh/education/adult_school.php">成人主日學</a></li>
 		                	<li><a href="/zh/education/children_school.php">兒童主日學</a></li>
