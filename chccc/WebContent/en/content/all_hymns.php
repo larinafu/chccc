@@ -1,11 +1,11 @@
 <?php include "$_SERVER[DOCUMENT_ROOT]/common/db_conn.php" ?>
 <div class="subcontent">
-<li>Online Messages</li>
+<li>Hymns</li>
 <?php
 mysql_connect($db_host, $username, $password);
 @ mysql_select_db($database) or die("Unable to select database");
 mysql_query('SET NAMES utf8');
-$query = "SELECT DISTINCT YEAR(MUSIC_DATE) AS music_year FROM ch_music ORDER BY YEAR(MUSIC_DATE) DESC";
+$query = "SELECT DISTINCT YEAR(MUSIC_DATE) AS music_year FROM ch_music where music_date >= '2026-12-31' ORDER BY YEAR(MUSIC_DATE) DESC";
 $result = mysql_query($query);
 
 //we are using isset() to avoid the "Notice: Undefined Index" from php 
@@ -38,7 +38,7 @@ while ($i < $num) {
 echo "</tr></table>";
 
 //MESSAGES
-$query = "SELECT * FROM ch_music WHERE YEAR(music_date)=$selected_year ORDER BY music_date DESC";
+$query = "SELECT * FROM ch_music WHERE YEAR(music_date)=$selected_year and music_date >= '2026-12-31' ORDER BY music_date DESC";
 $result = mysql_query($query);
 
 $num = mysql_numrows($result);

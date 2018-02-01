@@ -6,7 +6,7 @@ $audio_lib_path="/ChineseSundayMessage/";
 mysql_connect($db_host, $username, $password);
 @ mysql_select_db($database) or die("Unable to select database");
 mysql_query('SET NAMES utf8');
-$query = "SELECT DISTINCT YEAR(MESSAGE_DATE) AS message_year FROM ch_message WHERE is_training = 0 ORDER BY YEAR(MESSAGE_DATE) DESC";
+$query = "SELECT DISTINCT YEAR(MESSAGE_DATE) AS message_year FROM ch_message WHERE is_training = 0 and message_date >= '2016-12-31' ORDER BY YEAR(MESSAGE_DATE) DESC";
 $result = mysql_query($query);
 
 //we are using isset() to avoid the "Notice: Undefined Index" from php 
@@ -39,7 +39,7 @@ while ($i < $num) {
 echo "</tr></table>";
 
 //MESSAGES
-$query = "SELECT * FROM ch_message WHERE YEAR(message_date)=$selected_year AND is_training = 0 ORDER BY message_date DESC";
+$query = "SELECT * FROM ch_message WHERE YEAR(message_date)=$selected_year AND is_training = 0 and message_date >= '2016-12-31'  ORDER BY message_date DESC";
 $result = mysql_query($query);
 
 $num = mysql_numrows($result);
