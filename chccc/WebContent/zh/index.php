@@ -4,6 +4,14 @@
 <head>
   <?php include '../common/head.php'; ?> 
   <link rel="Stylesheet" type="text/css" href="/css/smoothDivScroll.css" /> 
+  <script>
+function popitup(link) {
+  var w = window.open(link.href,
+        link.target||"_blank",
+        'menubar=no,toolbar=no,location=no,directories=no,status=no,scrollbars=no,resizable=yes,dependent,width=600,height=850,left=0,top=0');
+  return w?false:true; // allow the link to work if popup is blocked
+ }
+</script>
 </head>
 
 <body>
