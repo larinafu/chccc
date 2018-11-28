@@ -9,7 +9,7 @@
 	  	<li class="left"><a href="/zh/quicklinks/english_learning.php">英語進修</a></li>
 	  	<li class="left"><a href="http://www.christianstudy.com/lifehymns.html">生命聖詩</a></li>
 	  	<li class="left"><a href="http://www.mediayoulike.com">聖詩在線</a></li>	  	
-	  	
+	  	<li class="left"><a href="http://73.150.48.74">BAS</a></li>
 	  </ul>
   </div>
     </footer>
