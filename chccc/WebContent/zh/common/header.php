@@ -79,6 +79,11 @@ mysql_close();
 		                	<li><a href="/zh/education/children_school.php">兒童主日學</a></li>
 		            	</ul>
                 	</li>
+                	<li><a href="#">網上資料</a>
+                		<ul>
+		                	<li><a href="/zh/education/hzjxysx.php">黃子嘉新約神學</a></li>
+		            	</ul>
+                	</li>
                 	<li><a href="/zh/education/trainning.php">同工培訓</a></li>
                 	<li><a href="#">圖書館</a>
                 		<ul>

@@ -3,6 +3,11 @@
         	<h3>教育</h3>
 	        <ul>
 		        <li><a href="/zh/education/introduction.php">教育事工簡介</a></li>
+		        <li><a href="#" style="text-decoration:none;">網上資料</a>
+                	<ul>
+		                <li style="padding: 0 0 4px 20px;"><a href="/zh/education/hzjxysx.php">黃子嘉新約神學</a></li>
+		            </ul>
+                </li>
                 <li><a href="/zh/education/trainning.php">同工培訓</a></li>
                 <li><a href="#" style="text-decoration:none;"><?php echo ($sundaySchool_menu);?></a>
                 	<ul>
