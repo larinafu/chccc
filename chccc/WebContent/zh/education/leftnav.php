@@ -9,9 +9,14 @@
 		            </ul>
                 </li>
                 <li><a href="/zh/education/trainning.php">同工培訓</a></li>
-                <li><a href="#" style="text-decoration:none;"><?php echo ($sundaySchool_menu);?></a>
+                <li><a href="#" style="text-decoration:none;">主日學</a>
                 	<ul>
-		                <li style="padding: 0 0 4px 20px;"><a href="/zh/education/adult_school.php">成人主日學</a></li>
+					    <li style="padding: 0 0 4px 20px;"><a href="/zh/education/adult_school202102.php">成人主日學2021夏</a></li>
+						<li style="padding: 0 0 4px 20px;"><a href="/zh/education/adult_school202101.php">成人主日學2021春</a></li>
+						<li style="padding: 0 0 4px 20px;"><a href="/zh/education/adult_school202004.php">成人主日學2020冬</a></li>
+						<li style="padding: 0 0 4px 20px;"><a href="/zh/education/adult_school202003.php">成人主日學2020秋</a></li>
+		                <li style="padding: 0 0 4px 20px;"><a href="/zh/education/adult_school202002.php">成人主日學2020夏</a></li>
+						<li style="padding: 0 0 4px 20px;"><a href="/zh/education/adult_school202001.php">成人主日學2020春</a></li>
 		                <li style="padding: 0 0 4px 20px;"><a href="/zh/education/children_school.php">兒童主日學</a></li>
 		            </ul>
                 </li>

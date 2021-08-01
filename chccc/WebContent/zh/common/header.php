@@ -60,6 +60,7 @@ mysql_close();
                 <li><a href="/zh/aboutus/history.php">教會歷史</a></li>
                 <li><a href="/zh/aboutus/map.php">地圖</a></li>
                 <li><a href="/zh/aboutus/contactus.php">聯絡我們</a></li>
+				<li><a href="/zh/aboutus/offering.php">奉献</a></li>
               </ul>		
             </li>
             <li><a href="/zh/worship/children_worship.php">崇拜</a>
@@ -75,7 +76,7 @@ mysql_close();
                 	<li><a href="/zh/education/introduction.php">教育事工簡介</a></li>
                 	<li><a href="#"><?php echo ($sundaySchool_menu);?></a>
                 		<ul>
-		                	<li><a href="/zh/education/adult_school.php">成人主日學</a></li>
+							<li><a href="/zh/education/adult_school202102.php">成人主日學2021夏</a></li>
 		                	<li><a href="/zh/education/children_school.php">兒童主日學</a></li>
 		            	</ul>
                 	</li>
