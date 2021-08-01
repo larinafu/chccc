@@ -32,7 +32,8 @@
 		$message_date=mysql_result($result,$i,"message_date");
 		$message_audio_file =mysql_result($result, $i, "message_audio_file_name");
 		$message_pdf_file =mysql_result($result, $i, "message_pdf_file_name");
-		
+		$message_video_file_name =mysql_result($result, $i, "message_video_file_name");
+        
 		if(!isset($message_audio_file)||""==$message_audio_file){
 			$date_msg=new DateTime($message_date);	
 			//echo "date is ".$date_msg;		
@@ -45,7 +46,7 @@
 		}
 		
 		$pdf_exists=false;
-		
+		$video_exists=false;
 		if(!empty($message_pdf_file)&&file_exists("$_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file")){
 			$pdf_exists=true;			
 		}
@@ -63,6 +64,10 @@
 		if($pdf_exists){
 				echo "<a href='$pdf_library$message_pdf_file' target='new'><img src='/images/pdf.gif'></a>";
 		}
+        // since video maybe the outlink, we will NOT check the existence on the server.
+        if (!empty($message_video_file_name) && strlen( trim($message_video_file_name) ) > 0 ){
+            echo "<a href='$message_video_file_name' target='new'><img src='/images/video-clip.png'></a>";
+        }
 		echo "</td></tr>";
 	
 		$i++;

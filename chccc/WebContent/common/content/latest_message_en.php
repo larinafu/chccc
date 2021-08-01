@@ -46,14 +46,14 @@
 		
 		$pdf_exists=false;
 		
-		if(!empty($message_pdf_file)&&file_exists("$_SERVER[DOCUMENT_ROOT]$pdf_library$message_pdf_file")){
+		if(!empty($message_pdf_file)&&file_exists("$_SERVER[DOCUMENT_ROOT]{$pdf_library_en}$message_pdf_file")){
 			$pdf_exists=true;			
 		}
 		
 		if("en"==$language)
 		{
 			echo "<tr><td>$message_date</td>" .
-					"<td>$speaker_title $speaker</td><td><a href='$audio_library/EnglishService/$message_audio_file' target='new'>$message_title</a></td><td>";	
+					"<td>$speaker_title $speaker</td><td><a href='{$audio_library}EnglishService/{$message_audio_file}' target='new'>$message_title</a></td><td>";	
 		}
 		else
 		{
@@ -61,7 +61,7 @@
 					"<td>$speaker$speaker_title</td><td><a href='$audio_library$message_audio_file' target='new'>$message_title</a></td><td>";	
 		}
 		if($pdf_exists){
-				echo "<a href='$pdf_library$message_pdf_file' target='new'><img src='/images/pdf.gif'></a>";
+				echo "<a href='$pdf_library_en$message_pdf_file' target='new'><img src='/images/pdf.gif'></a>";
 		}
 		echo "</td></tr>";
 	
