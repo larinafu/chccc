@@ -142,14 +142,15 @@ else {
 	}
 		
 	?>
-	
+<h2 class="header"><span style="color:purple">创建并同时上传信息可试用</span>：<a href="SimpleEdit_en.php">SimpleEdit_en.php</a></h2>	
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<table border="0" cellpadding="0" cellspacing="0" width="80%" align="center">
 			<tr>
 				<td class="label"></td>
 				<td class="space"></td>
-				<td><div class="header"><?php echo is_null($message_id) ? "创建" : "更新"; ?>信息</div><br></td>
+    <td><div class="header"><?php echo is_null($message_id) ? "创建" : "更新"; ?>信息(En)</div><br></td>
 			</tr>
+   
 			<tr>
 				<td class="label">信息日期:</td>
 				<td class="space"></td>
