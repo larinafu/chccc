@@ -1,3 +1,3 @@
-<?php 
-	header("Location: /zh/index.php");
-?>
+<?php 
+	header("Location: /zh/index.php");
+?>
