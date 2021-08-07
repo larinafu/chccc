@@ -33,8 +33,6 @@ function App() {
         setIsEnglish={setIsEnglish}
         isMobile={isMobile}
       />
-      <p>hello world</p>
-      <p>My name is larina!</p>
       <Route
         exact
         path="/"

@@ -160,7 +160,7 @@ const Navbar = (props) => {
           </ul>
 
           <div>
-            <button className="donateBtn">Donate</button>
+            <button className="donateBtn">奉献</button>
             <button
               className="toggleBtn toggleChinese"
               onClick={handleToggle}

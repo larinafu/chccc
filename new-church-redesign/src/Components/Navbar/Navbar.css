@@ -3,6 +3,7 @@ nav {
     justify-content: space-between;
     position: sticky;
     height: 3rem;
+    z-index: 3000;
 }
 nav ul {
     display: flex;
