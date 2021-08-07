@@ -1,0 +1,66 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 1rem;
+    display: inline-block;
+    width: 4rem;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
+nav > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10rem;
+
+}
+
+nav button {
+    border-radius: 1.5rem;
+}
+
+.toggleBtn {
+    display: flex;
+    width: 4.3rem;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    padding: .5rem .5rem;
+    border: none;
+}
+
+.toggleEnglish {
+    background-color: #2e81e6;
+    color: #fff;
+}
+
+.toggleChinese {
+    flex-direction: row-reverse;
+    background-color: #f04a4a;
+    color: #fff;
+}
+
+.toggleBtn .toggleCircle {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.donateBtn {
+    /* width: 4rem; */
+    border: none;
+    padding: 1rem 2rem;
+}
