@@ -35,11 +35,17 @@ function App() {
       />
       <p>hello world</p>
       <p>My name is larina!</p>
-      <Route exact path="/" component={Home} />
+      <Route
+        exact
+        path="/"
+        component={() => (
+          <Home isMod={isMod} />
+        )}
+      />
       <Route exact path="/about" component={About} />
       <Route exact path="/sermons" component={Sermons} />
       <Route exact path="/worship" component={Worship} />
-      <AuthButton setIsMod={setIsMod} />
+      <AuthButton isMod={isMod} setIsMod={setIsMod} />
     </div>
   );
 }
