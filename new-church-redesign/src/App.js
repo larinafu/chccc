@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
-    <p>
-      hello world
-    </p>
+    <div>
+      <p>hello world</p>
+      <p>My name is larina!</p>
+    </div>
   );
 }
 
