@@ -1,0 +1,7 @@
+footer a svg {
+    fill: #000;
+}
+footer a:hover svg path {
+    fill: #2e81e6;
+    color: #2e81e6
+}

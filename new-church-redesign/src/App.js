@@ -7,6 +7,7 @@ import About from "./Components/About";
 import Sermons from "./Components/Sermons";
 import Worship from "./Components/Worship";
 import AuthButton from "./Components/AuthButton/AuthButton";
+import Footer from "./Components/Footer/Footer";
 
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
@@ -44,6 +45,7 @@ function App() {
       <Route exact path="/sermons" component={Sermons} />
       <Route exact path="/worship" component={Worship} />
       <AuthButton isMod={isMod} setIsMod={setIsMod} />
+      <Footer />
     </div>
   );
 }

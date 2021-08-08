@@ -27,6 +27,7 @@ const AuthButton = (props) => {
     if (authorized) {
       props.setIsMod(true);
       setAuthPopup(false);
+      setErrorMsgs(false);
     } else {
       setErrorMsgs(true);
     }
