@@ -79,9 +79,12 @@ const AuthButton = (props) => {
           >
             <button
               className="exitBtn"
+              type="reset"
               onClick={() => {
                 setAuthPopup(false);
                 setErrorMsgs(false);
+                setUser("");
+                setPassword("");
               }}
             >
               <svg
