@@ -66,29 +66,46 @@ const AuthButton = (props) => {
       )}
 
       {authPopup && (
-        <div className='formContainer'>
+        <div className="formContainer">
           <form
             onSubmit={(e) => {
               e.preventDefault();
               handleSubmit();
             }}
           >
+            <button className="exitBtn" onClick={()=>{setAuthPopup(false)}}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z" />
+              </svg>
+            </button>
             <h1>Only Mods Have Access to this Feature</h1>
-            <label for="authUser">username</label>
-            <input
-              type="text"
-              name="authUser"
-              id="authUser"
-              onChange={(e) => setUser(e.target.value)}
-            />
-            <label for="authPass">password</label>
-            <input
-              type="password"
-              name="authPass"
-              id="authPass"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button type="submit">Submit</button>
+
+            <div className='inputContainer'>
+              <label htmlFor="authUser">username</label>
+              <input
+                type="text"
+                name="authUser"
+                id="authUser"
+                onChange={(e) => setUser(e.target.value)}
+              />
+            </div>
+            <div className='inputContainer'>
+              <label htmlFor="authPass">password</label>
+              <input
+                type="password"
+                name="authPass"
+                id="authPass"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <button className='submitBtn' type="submit">Submit</button>
           </form>
         </div>
       )}

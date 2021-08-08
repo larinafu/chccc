@@ -37,7 +37,7 @@ function App() {
         exact
         path="/"
         component={() => (
-          <Home isMod={isMod} />
+          <Home isMod={isMod} isEnglish={isEnglish} isMobile={isMobile} />
         )}
       />
       <Route exact path="/about" component={About} />

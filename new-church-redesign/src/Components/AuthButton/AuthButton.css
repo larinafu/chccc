@@ -1,16 +1,77 @@
 .authButton {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    border: .05rem solid #000;
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
-    cursor: pointer;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  border: 0.05rem solid #000;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  z-index: 5000;
 }
 
 .formContainer {
-    position: fixed;
-    /* height: 100vh; */
-    /* width: 100vw; */
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 3050;
+}
+
+.formContainer form {
+  width: 80%;
+  max-width: 40rem;
+  background-color: #fff;
+  border: 0.05rem solid #000;
+  border-radius: 2rem;
+  padding: 0.7rem;
+  margin: 2rem auto;
+}
+
+.formContainer form input {
+  border: 0.05rem solid #000;
+  border-radius: 2rem;
+  margin-left: 0.5rem;
+}
+
+.formContainer form .inputContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.formContainer form h1 {
+  text-align: center;
+  font-weight: 400;
+  margin: 0.5rem;
+}
+
+.formContainer form .submitBtn {
+  border: none;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-color: #b8dffc;
+  transition: 0.2s background-color, color ease-in-out;
+}
+
+.formContainer form .submitBtn:hover {
+  background-color: #2e81e6;
+  color: #fff;
+}
+
+.exitBtn {
+  display: flex;
+  margin-left: auto;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.exitBtn:hover svg {
+  fill: #f04a4a;
 }
