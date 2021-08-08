@@ -75,3 +75,8 @@
 .exitBtn:hover svg {
   fill: #f04a4a;
 }
+
+.errorMsg {
+    color: #f04a4a;
+    text-align: center;
+}

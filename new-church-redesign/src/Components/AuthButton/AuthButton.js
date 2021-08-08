@@ -6,6 +6,7 @@ import "./AuthButton.css";
 
 const AuthButton = (props) => {
   const [authPopup, setAuthPopup] = useState(false);
+  const [errorMsgs, setErrorMsgs] = useState(false);
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
 
@@ -26,6 +27,8 @@ const AuthButton = (props) => {
     if (authorized) {
       props.setIsMod(true);
       setAuthPopup(false);
+    } else {
+      setErrorMsgs(true);
     }
   };
 
@@ -73,7 +76,13 @@ const AuthButton = (props) => {
               handleSubmit();
             }}
           >
-            <button className="exitBtn" onClick={()=>{setAuthPopup(false)}}>
+            <button
+              className="exitBtn"
+              onClick={() => {
+                setAuthPopup(false);
+                setErrorMsgs(false);
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -86,8 +95,10 @@ const AuthButton = (props) => {
               </svg>
             </button>
             <h1>Only Mods Have Access to this Feature</h1>
-
-            <div className='inputContainer'>
+            {errorMsgs && (
+              <p className="errorMsg">incorrect username or password</p>
+            )}
+            <div className="inputContainer">
               <label htmlFor="authUser">username</label>
               <input
                 type="text"
@@ -96,7 +107,7 @@ const AuthButton = (props) => {
                 onChange={(e) => setUser(e.target.value)}
               />
             </div>
-            <div className='inputContainer'>
+            <div className="inputContainer">
               <label htmlFor="authPass">password</label>
               <input
                 type="password"
@@ -105,7 +116,9 @@ const AuthButton = (props) => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button className='submitBtn' type="submit">Submit</button>
+            <button className="submitBtn" type="submit">
+              Submit
+            </button>
           </form>
         </div>
       )}
